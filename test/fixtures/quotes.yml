@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_building: MyString
+  numApartment: 1
+  numFloor: 1
+  numElevator: 1
+  numOccupant: 1
+
+two:
+  type_building: MyString
+  numApartment: 1
+  numFloor: 1
+  numElevator: 1
+  numOccupant: 1
