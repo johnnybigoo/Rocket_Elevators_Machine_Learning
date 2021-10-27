@@ -1,0 +1,57 @@
+#border-rad {
+    border-radius: 5px;
+}
+
+#border-rad-2 {
+    border-radius: 5px;
+}
+
+#border-rad-3 {
+    border-radius: 5px;
+}
+
+#border-rad-4 {
+    border-radius: 0px 0px 5px 5px;
+}
+
+
+/* .form-control:focus {
+    box-shadow: none;
+    border-color: rgb(227, 238, 252)
+}
+
+.profile-button {
+    background: #BA68C8;
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: rgb(227, 238, 252);
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+} */

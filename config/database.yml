@@ -14,9 +14,10 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: Allo1392!
-  socket: /var/run/mysqld/mysqld.sock
-
+  password: mysql1234
+# host: localhost
+socket: /var/run/mysqld/mysqld.sock
+# OLd pw: Allo1392!
 development:
   <<: *default
   database: Rocket_Elevators_Information_System_development
