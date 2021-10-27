@@ -310,11 +310,13 @@
 
 
 			<!-- BUTTON CALLOUT -->
+			<%= link_to root_path(anchor: "contact"), 'data-turbolinks': false do %>
 			<a href="#contact" class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
 				<span class="font-lato fs-30"> 
 					<strong>Contact us &raquo;</strong>
 				</span>
 			</a>
+			<% end %>
 			<!-- /BUTTON CALLOUT -->
 
 
@@ -354,16 +356,17 @@
 
 
 			<!-- Parallax Contact Us -->
-			<section class="parallax parallax-1" style="background-image: url('assets/images/_rocket/Engineering-3.jpeg');">
+			<section class="parallax parallax-1" style="background-image: url(<%= image_path "_rocket/Engineering-3.jpeg" %>)">
 				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
-
 				<div class="container">
 
 					<div class="text-center">
 						<h2 class="fs-40 fw-300">Engineering &amp; Maintenance, Since 1976</h2>
 						<a class="btn btn-default btn-lg" href="quote.html">GET A QUOTE <i class="fa fa-angle-right"></i></a> 
-						&nbsp; OR &nbsp; 
+						&nbsp; OR &nbsp;
+						<%= link_to root_path(anchor: "contact"), 'data-turbolinks': false do %>
 						<a class="btn btn-danger btn-lg" href="#contact">CONTACT US <i class="fa fa-angle-right"></i></a>
+						<% end %>
 					</div>
 
 				</div>
@@ -401,7 +404,8 @@
 
 								<div class="item-box">
 									<figure>
-                    <%= image_tag "_rocket/portfolio/corp/600x300/1-commercial-3-burj-resize.jpeg" %>
+                    <%= image_path "_rocket/portfolio/corp/600x300/1-commercial-3-burj-resize.jpeg", :alt => "image", :class => "img-fluid", :width => "600", :height => "399" %>
+
 									</figure>
 
 									<div class="item-box-desc">
