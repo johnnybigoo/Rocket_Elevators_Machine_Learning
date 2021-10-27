@@ -32,8 +32,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'bootstrap', '~> 4.4.1'
-gem 'jquery-rails'
+# gem 'bootstrap', '~> 4.4.1'
+# gem 'jquery-rails'
 
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -66,3 +66,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise', '~> 4.8'
 gem 'owlcarousel-rails'
+
+gem 'rails_admin', '~> 2.0'
+
+gem 'devise'
+

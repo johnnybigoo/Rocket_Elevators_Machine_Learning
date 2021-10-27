@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2021_10_27_155143) do
 
   create_table "employees", primary_key: "email", id: :string, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -43,4 +44,5 @@ ActiveRecord::Schema.define(version: 2021_10_27_155143) do
   end
 
   add_foreign_key "employees", "users", column: "email", primary_key: "email"
+
 end
