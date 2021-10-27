@@ -1,141 +1,513 @@
-			<hr class="m-0" /><!-- 1px line separator -->
+<!-- SLIDE TOP -->
+<div id="slidetop">
 
-            <!-- Observation elevator -->
-			<section id="observation-elevator">
-				<div class="container text-center">
-					<div class="heading-title heading-dotted text-center">
-						<h2>Commercial</h2>
-					</div>
+  <div class="container">
+    
+    <div class="row">
 
-					<div class="row text-left">
+      <div class="col-md-4">
+        <h6><i class="icon-heart"></i> WHY ROCKET ELEVATORS?</h6>
+        <p>We have the conviction that we create the most innovative and reliable products on the market. Contact us today for any questions you might have. </p>
+      </div>
 
-						<div class="col-sm-8">
-							<%= image_tag("_rocket/commercial-page/1-observation-elevator-exporter.jpeg", :alt => "Observation elevator") %>
-						</div>
+      <div class="col-md-4">
+        <h6><i class="icon-envelope"></i> CONTACT INFO</h6>
+        <ul class="list-unstyled">
+          <li><b>Address:</b> Address: 418-725 Boulevard Lebourgneuf, <br /> 
+            Quebec City - QC, G2J 0C4  <br /> Canada</li>
+          <li><b>Phone:</b> (418) 555-1234</li>
+          <li><b>Email:</b> </li>
+        </ul>
+      </div>
 
-						<div class="col-sm-4">
-							<h3 class="fw-300"><span>Observation</span> Elevator</h3>
-						
-							<p>Sail Sightseeing (observation) Elevator perfectly integrates the passenger elevator and panoramic functions, allowing passengers to use the elevator for a more open view while taking the elevator. A variety of car designs provide customers with more choices suitable for buildings. </p>
-							
-							
-							
-							<hr />
+    </div>
 
-							<ul class="list-unstyled list-icons">
-								<li><i class="fa fa-check"></i> Allows the passengers to view the surroundings while traveling from one floor to another. It is one of the highly recommended facilities in public places.</li>
-								<li><i class="fa fa-check"></i> Transparent windows which provide the outside view enrich the prestige of any building.</li>
-								<li><i class="fa fa-check"></i> Excellent addition to all types of buildings such as hotels, shopping complexes, office buildings, hospitals, towers etc.</li>
-								<li><i class="fa fa-check"></i> Allows the vision of outside, the anxiety or claustrophobia can be handled easily. </li>
-							</ul>
+  </div>
 
-						</div>
-					</div>
+  <a class="slidetop-toggle" href="#"><!-- toggle button --></a>
 
-				</div>
-			</section>
-			<!-- /Observation elevator-->
+</div>
+<!-- /SLIDE TOP -->
 
 
-			<!-- Traction elevator -->
-			<section id="traction-elevator">
-                <div class="container text-center">
+<!-- wrapper -->
+<div id="wrapper">
 
-                    <div class="row text-left">
+  <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
-                        <div class="col-sm-8">
-														<%= image_tag("_rocket/commercial-page/2-tractor-elevator-skylon-tower-resize.jpeg", :alt => "Traction elevator") %>
-                        </div>
+    <!-- TOP NAV -->
+    <header id="topNav">
+      <div class="container">
 
-                        <div class="col-sm-4">
-                            <h3 class="fw-300"><span>Traction</span> Elevator</h3>
-                        
-                            <p>Traction elevators are the most common type of elevators. Elevator cars are pulled up by means of rolling steel ropes over a deeply grooved pulley, commonly called a sheave in the industry. The weight of the car is balanced by a counterweight since 1900. Sometimes two elevators are built so that their cars always move synchronously in opposite directions, and are each other's counterweight. </p>
-                            
-                            
-                            
-                            <hr />
+        <!-- Mobile Menu Button -->
+        <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
 
-                            <ul class="list-unstyled list-icons">
-                                <li><i class="fa fa-check"></i> The cab is raised and lowered by traction steel ropes or belts on a pulley system. </li>
-                                <li><i class="fa fa-check"></i> These elevators uses less energy than hydraulic elevators.</li>
-                                <li><i class="fa fa-check"></i> Serve mid to high-rise buildings.</li>
-                                <li><i class="fa fa-check"></i> The ride is smoother than hydraulic elevators. </li>
-                            </ul>
+        <!-- Logo -->
+        <a class="logo float-left" href="index.html">
+          <%= image_tag "_rocket/R2.png" %>
+        </a>
 
-                        </div>
+        <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+          <nav class="nav-main">
+
+            <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+              <li class>
+                <!-- HOME -->
+                <a id="home-nav" class="" href="index.html">
+                  HOME
+                </a>
+              </li>
+              <li><!-- SERVICES -->
+                <a href="index.html#services" class="dropdown-toggle">
+                  SERVICES
+                </a>
+
+                <ul class="dropdown-menu white-space= normal">
+                  <li>
+                    <a href="residential.html#vacuum-home">Residential</a>
+                  </li>
+
+                  <li>
+                    <a href="quote.html#request-quote">Request A Quote</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li><!-- PORTFOLIO -->
+                <a href="index.html#portfolio">
+                  PORTFOLIO
+                </a>
+              </li>
+              <li><!-- NEWS -->
+                <a href="index.html#news">
+                  NEWS
+                </a>
+              </li>
+              <li><!-- CLIENTS -->
+                <a href="index.html#clients">
+                  CLIENTS
+                </a>
+              </li>
+              <li><!-- CONTACT -->
+                <a href="index.html#contact">
+                  CONTACT
+                </a>
+              </li>
+            </ul>
+
+          </nav>
+        </div>
+
+      </div>
+    </header>
+    <!-- /Top Nav -->
+
+  </div>
+
+
+
+  <!-- REVOLUTION SLIDER -->
+  <div class="slider fullwidthbanner-container roundedcorners">
+
+    <div class="fullwidthbanner" data-height="600" data-shadow="0" data-navigationstyle="preview2">
+      <ul class="hide">
+      
+        <!-- SLIDE  -->
+        <li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Safety">
+          <!-- MAIN IMAGE -->
+          <%= image_tag "_rocket/3-main-elevators.jpeg", data: {:bgposition=>"center top", :bgfit=>"cover", :bgrepeat=>"no-repeat"} %>
+
+          <div class="tp-caption white_big skewfromleft tp-resizeme"
+            data-x="471"
+            data-y="100" 
+            data-speed="400"
+            data-start="1500"
+            data-easing="Power3.easeInOut"
+            data-splitin="words"
+            data-splitout="none"
+            data-elementdelay="0.1"
+            data-endelementdelay="0.1"
+            data-endspeed="600"
+            style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+              Rocket Elevators
+          </div>
+
+          <div class="tp-caption content_text_center skewfromleft tp-resizeme"
+            data-x="530"
+            data-y="195" 
+            data-speed="500"
+            data-start="2000"
+            data-easing="Power3.easeInOut"
+            data-splitin="none"
+            data-splitout="none"
+            data-elementdelay="0.1"
+            data-endelementdelay="0.1"
+            data-endspeed="600"
+
+            style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
+              Elevate you home or your commercial building, <br />
+              Safety, Speed and Style.
+          </div>
+
+          <div class="tp-caption tp-fade"
+            data-x="left"
+            data-y="25" 
+            data-speed="300"
+            data-start="800"
+            data-easing="Power3.easeInOut"
+            data-elementdelay="0.1"
+            data-endelementdelay="0.1"
+            data-endspeed="300"
+            style="z-index: 4;">
+              <!-- <img src="demo_files/images/thematics/construction/worker-min.png" alt=""> -->
+          </div>
+
+          <div class="tp-caption skewfromleft tp-resizeme  un-button-2-lg"
+            data-x="665"
+            data-y="300" 
+            data-speed="300"
+            data-start="2500"
+            data-easing="Power3.easeInOut"
+            data-splitin="none"
+            data-splitout="none"
+            data-elementdelay="0.1"
+            data-endelementdelay="0.1"
+            data-endspeed="300"
+
+            style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+              <a class="btn btn-danger btn-lg" href="quote.html">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
+          </div>
+        </li>
+
+        <!-- SLIDE  -->
+        <li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off" data-title="Residential">
+          <!-- MAIN IMAGE -->
+          <%= image_tag "_rocket/residential-elevator.jpeg", data:{:bgposition=>"center top", :bgfit=>"cover", :bgrepeat=>"no-repeat"} %>
+
+          <div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
+
+          <div class="tp-caption font-roboto skewfromleft tp-resizeme"
+            data-x="50"
+            data-y="100" 
+            data-speed="500"
+            data-start="1500"
+            data-easing="Cubic.easeOut"
+            data-splitin="none"
+            data-splitout="none"
+            data-elementdelay="0.1"
+            data-endelementdelay="0.1"
+            data-endspeed="500"
+            style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+              Residential Elevators  <br />
+              Made affordable
+              
+          </div>
+
+          <div class="tp-caption skewfromrightshort tp-resizeme"
+            data-x="50"
+            data-y="300" 
+            data-speed="500"
+            data-start="1000"
+            data-easing="easeInCirc"
+            data-splitin="none"
+            data-splitout="none"
+            data-elementdelay="0.1"
+            data-endelementdelay="0.1"
+            data-endspeed="500"
+            style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
+              The high-end quality of Our Residential Elevators <br />
+              is unequaled.
+          </div>
+
+          <div class="tp-caption sfb tp-resizeme"
+            data-x="50"
+            data-y="410" 
+            data-speed="500"
+            data-start="1500"
+            data-easing="Power3.easeIn"
+            data-splitin="none"
+            data-splitout="none"
+            data-elementdelay="1"
+            data-endelementdelay="0.1"
+            data-endspeed="500"
+            style="z-index: 4; max-width: auto;">
+              <a class="btn btn-danger btn-lg" href="residential.html">RESIDENTIAL SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+          </div>
+
+        </li>
+
+        <!-- SLIDE  -->
+        <li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off" data-title="Commercial">
+          <!-- MAIN IMAGE -->
+          <%= image_tag "_rocket/3-commercial-elevators.jpeg", data:{:bgposition=>"center top", :bgfit=>"cover", :bgrepeat=>"no-repeat"} %>
+
+          <div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
+
+          <div class="tp-caption font-roboto skewfromleft tp-resizeme"
+            data-x="50"
+            data-y="100" 
+            data-speed="500"
+            data-start="1500"
+            data-easing="Cubic.easeOut"
+            data-splitin="none"
+            data-splitout="none"
+            data-elementdelay="0.1"
+            data-endelementdelay="0.1"
+            data-endspeed="500"
+            style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+              A High end brand for <br />
+              Commercial Elevators 
+              
+          </div>
+
+          <div class="tp-caption skewfromrightshort tp-resizeme"
+            data-x="50"
+            data-y="300" 
+            data-speed="500"
+            data-start="1000"
+            data-easing="easeInCirc"
+            data-splitin="none"
+            data-splitout="none"
+            data-elementdelay="0.1"
+            data-endelementdelay="0.1"
+            data-endspeed="500"
+            style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
+              From London to Tokyo... <br />
+              our Lifts impress!
+          </div>
+
+          <div class="tp-caption sfb tp-resizeme"
+            data-x="50"
+            data-y="410" 
+            data-speed="500"
+            data-start="1500"
+            data-easing="Power3.easeIn"
+            data-splitin="none"
+            data-splitout="none"
+            data-elementdelay="1"
+            data-endelementdelay="0.1"
+            data-endspeed="500"
+            style="z-index: 4; max-width: auto;">
+              <a class="btn btn-danger btn-lg" href="commercial.html">COMMERCIAL SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+          </div>
+
+        </li>
+
+      </ul>
+                <div class="tp-bannertimer"><!-- progress bar --></div>
+    </div>
+  </div>
+  <!-- /REVOLUTION SLIDER -->
+
+
+  <hr class="m-0" /><!-- 1px line separator -->
+
+        <!-- Observation elevator -->
+  <section id="observation-elevator">
+    <div class="container text-center">
+      <div class="heading-title heading-dotted text-center">
+        <h2>Commercial</h2>
+      </div>
+
+      <div class="row text-left">
+
+        <div class="col-sm-8">
+          <%= image_tag "_rocket/commercial-page/1-observation-elevator-exporter.jpeg" %>
+        </div>
+
+        <div class="col-sm-4">
+          <h3 class="fw-300"><span>Observation</span> Elevator</h3>
+        
+          <p>Sail Sightseeing (observation) Elevator perfectly integrates the passenger elevator and panoramic functions, allowing passengers to use the elevator for a more open view while taking the elevator. A variety of car designs provide customers with more choices suitable for buildings. </p>
+          
+          
+          
+          <hr />
+
+          <ul class="list-unstyled list-icons">
+            <li><i class="fa fa-check"></i> Allows the passengers to view the surroundings while traveling from one floor to another. It is one of the highly recommended facilities in public places.</li>
+            <li><i class="fa fa-check"></i> Transparent windows which provide the outside view enrich the prestige of any building.</li>
+            <li><i class="fa fa-check"></i> Excellent addition to all types of buildings such as hotels, shopping complexes, office buildings, hospitals, towers etc.</li>
+            <li><i class="fa fa-check"></i> Allows the vision of outside, the anxiety or claustrophobia can be handled easily. </li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- /Observation elevator-->
+
+
+  <!-- Traction elevator -->
+  <section id="traction-elevator">
+            <div class="container text-center">
+
+                <div class="row text-left">
+
+                    <div class="col-sm-8">
+                      <%= image_tag "_rocket/commercial-page/2-tractor-elevator-skylon-tower-resize.jpeg" %>
                     </div>
 
-                </div>
-			</section>
-			<!-- /Traction elevator-->
-
-
-			<!-- Hydraulic elevator -->
-			<section id="hydraulic-elevator">
-                <div class="container text-center">
-
-                    <div class="row text-left">
-
-                        <div class="col-sm-8">
-														<%= image_tag("_rocket/commercial-page/3-hydraulic-elevator-resize.jpeg", :alt => "Hydraulic elevator") %>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <h3 class="fw-300"><span>Hydraulic</span> Elevator</h3>
+                    <div class="col-sm-4">
+                        <h3 class="fw-300"><span>Traction</span> Elevator</h3>
+                    
+                        <p>Traction elevators are the most common type of elevators. Elevator cars are pulled up by means of rolling steel ropes over a deeply grooved pulley, commonly called a sheave in the industry. The weight of the car is balanced by a counterweight since 1900. Sometimes two elevators are built so that their cars always move synchronously in opposite directions, and are each other's counterweight. </p>
                         
-                            <p>Unlike traction systems, hydraulic elevators don’t use overhead hoisting machinery. Instead, these elevators lift a cab by using a fluid-driven piston that is mounted inside of a cylinder. The necessary fluid has traditionally been oil-based but can be replaced with vegetable oil to decrease the environmental impact. </p>
-                            
-                            
-                            
-                            <hr />
+                        
+                        
+                        <hr />
 
-                            <ul class="list-unstyled list-icons">
-                                <li><i class="fa fa-check"></i> Hydraulic elevators are most often found in buildings that serve up to five stories because they operate at slower speeds than other types of elevators — typically 150 ft./min. or less. </li>
-                                <li><i class="fa fa-check"></i> These elevators are more affordable to install than traction elevators and less expensive to maintain and repair.</li>
-                                <li><i class="fa fa-check"></i> They are better for transporting heavy loads.</li>
-                                <li><i class="fa fa-check"></i> Above-ground models available with or without machine rooms (pre-engineered only). </li>
-                            </ul>
+                        <ul class="list-unstyled list-icons">
+                            <li><i class="fa fa-check"></i> The cab is raised and lowered by traction steel ropes or belts on a pulley system. </li>
+                            <li><i class="fa fa-check"></i> These elevators uses less energy than hydraulic elevators.</li>
+                            <li><i class="fa fa-check"></i> Serve mid to high-rise buildings.</li>
+                            <li><i class="fa fa-check"></i> The ride is smoother than hydraulic elevators. </li>
+                        </ul>
 
-                        </div>
+                    </div>
+                </div>
+
+            </div>
+  </section>
+  <!-- /Traction elevator-->
+
+
+  <!-- Hydraulic elevator -->
+  <section id="hydraulic-elevator">
+            <div class="container text-center">
+
+                <div class="row text-left">
+
+                    <div class="col-sm-8">
+                      <%= image_tag "_rocket/commercial-page/3-hydraulic-elevator-resize.jpeg" %>
                     </div>
 
-                </div>
-			</section>
-			<!-- /Hydraulic elevator-->
-
-
-			<!-- Freight elevator -->
-			<section id="freight-elevator">
-                <div class="container text-center">
-
-                    <div class="row text-left">
-
-                        <div class="col-sm-8">
-														<%= image_tag("_rocket/commercial-page/4-freight-elevator-resize.jpeg", :alt => "Freight elevator") %>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <h3 class="fw-300"><span>Freight</span> Elevator</h3>
+                    <div class="col-sm-4">
+                        <h3 class="fw-300"><span>Hydraulic</span> Elevator</h3>
+                    
+                        <p>Unlike traction systems, hydraulic elevators don’t use overhead hoisting machinery. Instead, these elevators lift a cab by using a fluid-driven piston that is mounted inside of a cylinder. The necessary fluid has traditionally been oil-based but can be replaced with vegetable oil to decrease the environmental impact. </p>
                         
-                            <p>RocketElevators has significant experience manufacturing, installing and maintaining a wide assortment of freight elevators, both standard and custom designs. RocketElevators' engineering and manufacturing departments develop some of the most robust freight elevators in the industry. </p>
-                            
-                            
-                            
-                            <hr />
+                        
+                        
+                        <hr />
 
-                            <ul class="list-unstyled list-icons">
-                                <li><i class="fa fa-check"></i> Traction: Speeds ranging from 0.5 to 1.75 metres per second. </li>
-                                <li><i class="fa fa-check"></i> Traction: Capacities from 910 to 9,000 kilograms and beyond. </li>
-                                <li><i class="fa fa-check"></i> Traction: Microprocessor-based dispatching and state-of-the-art VVVF AC motor control. </li>
-                                <li><i class="fa fa-check"></i> Hydraulic: Speeds ranging from 0.4 to 0.75 metres per second. </li>
-                                <li><i class="fa fa-check"></i> Hydraulic: Capacities from 900 to 20,000 kilograms and beyond. </li>
-                                <li><i class="fa fa-check"></i> Hydraulic: Material lifts (freight platform lifts) also available. </li>
-                            </ul>
+                        <ul class="list-unstyled list-icons">
+                            <li><i class="fa fa-check"></i> Hydraulic elevators are most often found in buildings that serve up to five stories because they operate at slower speeds than other types of elevators — typically 150 ft./min. or less. </li>
+                            <li><i class="fa fa-check"></i> These elevators are more affordable to install than traction elevators and less expensive to maintain and repair.</li>
+                            <li><i class="fa fa-check"></i> They are better for transporting heavy loads.</li>
+                            <li><i class="fa fa-check"></i> Above-ground models available with or without machine rooms (pre-engineered only). </li>
+                        </ul>
 
-                        </div>
+                    </div>
+                </div>
+
+            </div>
+  </section>
+  <!-- /Hydraulic elevator-->
+
+
+  <!-- Freight elevator -->
+  <section id="freight-elevator">
+            <div class="container text-center">
+
+                <div class="row text-left">
+
+                    <div class="col-sm-8">
+                      <%= image_tag "_rocket/commercial-page/4-freight-elevator-resize.jpeg" %>
+
                     </div>
 
+                    <div class="col-sm-4">
+                        <h3 class="fw-300"><span>Freight</span> Elevator</h3>
+                    
+                        <p>RocketElevators has significant experience manufacturing, installing and maintaining a wide assortment of freight elevators, both standard and custom designs. RocketElevators' engineering and manufacturing departments develop some of the most robust freight elevators in the industry. </p>
+                        
+                        
+                        
+                        <hr />
+
+                        <ul class="list-unstyled list-icons">
+                            <li><i class="fa fa-check"></i> Traction: Speeds ranging from 0.5 to 1.75 metres per second. </li>
+                            <li><i class="fa fa-check"></i> Traction: Capacities from 910 to 9,000 kilograms and beyond. </li>
+                            <li><i class="fa fa-check"></i> Traction: Microprocessor-based dispatching and state-of-the-art VVVF AC motor control. </li>
+                            <li><i class="fa fa-check"></i> Hydraulic: Speeds ranging from 0.4 to 0.75 metres per second. </li>
+                            <li><i class="fa fa-check"></i> Hydraulic: Capacities from 900 to 20,000 kilograms and beyond. </li>
+                            <li><i class="fa fa-check"></i> Hydraulic: Material lifts (freight platform lifts) also available. </li>
+                        </ul>
+
+                    </div>
                 </div>
-			</section>
-			<!-- /Freight elevator-->
+
+            </div>
+  </section>
+  <!-- /Freight elevator-->
+
+
+
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+
+
+      <div class="row">
+
+        <!-- col #1 -->
+        <div class="col-md-8">
+
+          <h3 class="letter-spacing-1">WHY US?</h3>
+
+          <!-- Small Description -->
+          <p>
+            We have the conviction that we create the most innovative and reliable products on the market. Contact us today for any questions you might have.
+          </p>
+          <h2>(418) 555-1234</h2>
+        </div>
+        <!-- /col #1 -->
+
+        <!-- col #2 -->
+        <div class="col-md-4">
+          <h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+          <!-- Newsletter Form -->
+          <p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+          <form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+              <input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+              <span class="input-group-btn">
+                <button class="btn btn-danger" type="submit">Subscribe</button>
+              </span>
+            </div>
+          </form>
+          <!-- /Newsletter Form -->
+
+
+        </div>
+        <!-- /col #2 -->
+
+      </div>
+
+
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        &copy; All Rights Reserved, Rocket Elevators LTD
+      </div>
+    </div>
+
+  </footer>
+  <!-- /FOOTER -->
+
+</div>
+<!-- /wrapper -->
+
+
+<!-- SCROLL TO TOP -->
+<a href="#" id="toTop"></a>
+
