@@ -11,12 +11,9 @@
   </head>
 
   <body>
-
-    <%= render 'pages/header' %>
-
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-
+    <%= render "partials/header" %>
+    
     <%= yield %>
+    <%= render "partials/footer" %>
   </body>
 </html>
