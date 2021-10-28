@@ -35,8 +35,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'rails-ujs', '~> 0.1.0'
-
-# gem 'jquery-rails'
+gem 'bootstrap-sass', '~> 3.3.4'
+gem 'font-awesome-sass', '~> 4.3.0'
+gem 'jquery-ui-rails'
+gem 'bootstrap-social-rails'
 
 
 # Reduces boot times through caching; required in config/boot.rb
