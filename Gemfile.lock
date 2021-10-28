@@ -52,11 +52,14 @@ GEM
       io-like (~> 0.3.0)
     arel (9.0.0)
 <<<<<<< HEAD
+<<<<<<< HEAD
     autoprefixer-rails (10.3.3.0)
       execjs (~> 2)
 =======
 
     bcrypt (3.1.16)
+=======
+>>>>>>> 21d0dd318cbc576930cdfea2c0d2889db89181dd
     autoprefixer-rails (10.3.3.0)
       execjs (~> 2)
     bcrypt (3.1.16)
@@ -112,9 +115,12 @@ GEM
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 8a0a93e9914ed81542307bf7b807494eeee9c945
+=======
+>>>>>>> 21d0dd318cbc576930cdfea2c0d2889db89181dd
     jquery-rails (4.4.0)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
