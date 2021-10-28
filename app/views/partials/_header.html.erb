@@ -105,11 +105,10 @@
 										<% if user_signed_in? %>
                                     		<li><!-- SIGN OUT -->
                                         	<%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %>
-                                    	</li>
-                                		<% else %>
-                                    		<li><!-- SIGN IN -->
-                                        	
-                                    	</li>
+                                    		</li>
+											<li><!-- ADMIN -->
+                                        	<%= link_to "ADMIN", rails_admin_path %>
+                                    		</li>
                                 		<% end %>
 									</li>
 								</ul>
