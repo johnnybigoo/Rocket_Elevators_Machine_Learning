@@ -101,9 +101,16 @@
 										</a>
 									</li>
 									<li><!-- ADMIN -->
-										<a href="#admin">
-											ADMIN
-										</a>
+										<%= link_to "SIGN IN", new_user_session_path %>
+										<% if user_signed_in? %>
+                                    		<li><!-- SIGN OUT -->
+                                        	<%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %>
+                                    	</li>
+                                		<% else %>
+                                    		<li><!-- SIGN IN -->
+                                        	
+                                    	</li>
+                                		<% end %>
 									</li>
 								</ul>
 
