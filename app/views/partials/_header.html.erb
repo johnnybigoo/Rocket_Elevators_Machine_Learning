@@ -1,0 +1,130 @@
+<!-- SLIDE TOP -->
+		<div id="slidetop">
+
+			<div class="container">
+				
+				<div class="row">
+
+					<div class="col-md-4">
+						<h6><i class="icon-heart"></i> WHY ROCKET ELEVATORS?</h6>
+						<p>We have the conviction that we create the most innovative and reliable products on the market. Contact us today for any questions you might have. </p>
+					</div>
+
+					<div class="col-md-4">
+						<h6><i class="icon-envelope"></i> CONTACT INFO</h6>
+						<ul class="list-unstyled">
+							<li><b>Address:</b> Address: 418-725 Boulevard Lebourgneuf, <br /> 
+								Quebec City - QC, G2J 0C4  <br /> Canada</li>
+							<li><b>Phone:</b> (418) 555-1234</li>
+							<li><b>Email:</b> <a href="/cdn-cgi/l/email-protection#fc95929a93bc9f9398999e938484d29e9586"><span class="__cf_email__" data-cfemail="3950575f56795a565d5c5b564141175b5043">[email&#160;protected]</span></a></li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+
+			<a class="slidetop-toggle" href="#"><!-- toggle button --></a>
+
+		</div>
+		<!-- /SLIDE TOP -->
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<!-- scrollTo -->
+						<a class="logo float-left scrollTo" href="#top">
+              <%= image_tag "_rocket/R2.png" %>
+						</a>
+
+						<!-- Top Nav -->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li class>
+										<!-- HOME -->
+                                    <%if @index %>
+                                    <a id="home-nav" class="scrollTo" href="#top">
+                                        HOME
+                                    </a>
+                                    <%else%>
+                                    <%= link_to"HOME" , root_path %>
+                                    <%end%>
+									
+									</li>
+									<li><!-- SERVICES -->
+										<a href="#services" class="dropdown-toggle">
+											SERVICES
+										</a>
+										<!-- <a href="#services">
+											SERVICES
+										</a> -->
+										<ul class="dropdown-menu white-space= normal">
+											<li>
+												<%= link_to"Residential" , pages_residential_path %>
+											</li>
+											<li>
+												<<%= link_to"Commercial" , pages_commercial_path %>
+											</li>
+											<li>
+												<%= link_to"Quote" , pages_residential_path %>
+											</li>
+										</ul>
+									</li>
+
+									<li><!-- PORTFOLIO -->
+										<!-- id="portfolio-nav" -->
+										<a href="#portfolio">
+											PORTFOLIO
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- CLIENTS -->
+										<a href="#clients">
+											CLIENTS
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="#contact">
+											CONTACT
+										</a>
+									</li>
+									<li><!-- ADMIN -->
+										<%= link_to "SIGN IN", new_user_session_path %>
+										<% if user_signed_in? %>
+                                    		<li><!-- SIGN OUT -->
+                                        	<%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %>
+                                    		</li>
+											<li><!-- ADMIN -->
+                                        	<%= link_to "ADMIN", rails_admin_path %>
+                                    		</li>
+                                		<% end %>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
