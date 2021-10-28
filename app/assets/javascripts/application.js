@@ -17,6 +17,8 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require jquery3
+//= require jquery-ui
 //= require jquery_ujs
+//= require bootstrap.min
 //= require_tree .
 //= require owl.carousel
