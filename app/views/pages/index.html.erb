@@ -67,7 +67,7 @@
 								data-endspeed="300"
 
 								style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
-									<a class="btn btn-danger btn-lg" href="quote.html#request-quote">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
+									<%= link_to "GET A QUOTE", pages_quote_path, class:"btn btn-danger btn-lg" %>
 							</div>
 						</li>
 
@@ -123,7 +123,7 @@
 								data-endelementdelay="0.1"
 								data-endspeed="500"
 								style="z-index: 4; max-width: auto;">
-									<a class="btn btn-danger btn-lg" href="residential.html">RESIDENTIAL SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+									<%= link_to "RESIDENTIAL SERVICES", pages_residential_path, class:"btn btn-danger btn-lg" %>
 							</div>
 						</li>
 
@@ -179,7 +179,7 @@
 								data-endelementdelay="0.1"
 								data-endspeed="500"
 								style="z-index: 4; max-width: auto;">
-									<a class="btn btn-danger btn-lg" href="commercial.html">COMMERCIAL SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+									<%= link_to "COMMERCIAL SERVICES", pages_commercial_path, class:"btn btn-danger btn-lg" %>
 							</div>
 
 						</li>
@@ -289,7 +289,7 @@
 
 								<div class="item-box">
 									<figure>
-                    <%= image_path "_rocket/portfolio/corp/600x300/1-commercial-3-burj-resize.jpeg", :alt => "image", :class => "img-fluid", :width => "600", :height => "399" %>
+                    <%= image_tag "_rocket/portfolio/corp/600x300/1-commercial-3-burj-resize.jpeg", :alt => "image", :class => "img-fluid", :width => "600", :height => "399" %>
 
 									</figure>
 
@@ -501,7 +501,7 @@
 
 								<div class="item-box">
 									<figure>
-                    <%= image_path "_rocket/portfolio/awards/600x300/4-the-ellies-2020-resize.png", :alt => "image", :class => "img-fluid", :width => "600", :height => "399" %>
+                    <%= image_tag "_rocket/portfolio/awards/600x300/4-the-ellies-2020-resize.png", :alt => "image", :class => "img-fluid", :width => "600", :height => "399" %>
 									</figure>
 
 									<div class="item-box-desc">
@@ -576,7 +576,7 @@
 						<div class="img-hover">
 							<a href="https://elevatorworld.com/news/daily-news/rezoning-for-chicago-mixed-use-development-approved/" target="_blank">
 								<!-- img class="img-fluid" src="assets/images/_rocket/news/news-thumb-3.png" width="451" height="300" alt="Elevator World" -->
-								<%= image_tag "_rocket/news/news-thumb-3.png", :alt => "cover image", :data_bgposition => "center top", :data_bgfit => "cover", :data_bgrepeat => "no-repeat" %>
+								<%= image_tag "_rocket/news/news-thumb-3.png", :class=>"img-fluid", :width=>"451", :height=>"300" %>
 
 							</a>
 
@@ -868,15 +868,13 @@
 											</div>
 									</div>
 									<div class="row">
-											<div class="col-md-12">
-												<label for="contact:attachment">File Attachment</label>
-
-												<!-- custom file upload -->
-												<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="Select a File" />
-												<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
-
-											</div>
-									</div>
+                                            <div class="col-md-12">
+                                                <label for="contact:attachment">File Attachment</label>
+                                                <!-- custom file upload -->
+                                                <input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="Select a File" />
+                                                <small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
+                                            </div>
+                                    </div>
 
 								</fieldset>
 
