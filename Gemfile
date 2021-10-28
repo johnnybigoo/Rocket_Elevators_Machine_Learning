@@ -68,6 +68,6 @@ gem 'devise', '~> 4.8'
 gem 'owlcarousel-rails'
 
 gem 'rails_admin', '~> 2.0'
+gem 'bootstrap', '~> 5.1.0'
 
-gem 'devise'
 
