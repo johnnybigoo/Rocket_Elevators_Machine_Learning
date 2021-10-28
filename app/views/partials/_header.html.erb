@@ -57,9 +57,7 @@
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
 									<li class>
 										<!-- HOME -->
-										<a id="home-nav" class="scrollTo" href="#top">
-											HOME
-										</a>
+										<%= link_to "HOME", root_path, id:"home-nav", class:"scrollTo" %>
 									</li>
 									<li><!-- SERVICES -->
 										<a href="#services" class="dropdown-toggle">
@@ -100,6 +98,11 @@
 									<li><!-- CONTACT -->
 										<a href="#contact">
 											CONTACT
+										</a>
+									</li>
+									<li><!-- ADMIN -->
+										<a href="#admin">
+											ADMIN
 										</a>
 									</li>
 								</ul>
