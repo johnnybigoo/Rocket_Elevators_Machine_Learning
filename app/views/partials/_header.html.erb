@@ -58,12 +58,16 @@
 									<li class>
 										<!-- HOME -->
                                     <%if @index %>
-                                    	<a id="home-nav" class="scrollTo" href="#top">
-                                        	HOME
-                                    	</a>
+
+                                    <a id="home-nav" class="scrollTo" href="#top">
+                                        HOME
+                                    </a>
                                     <%else%>
-                                    	<%= link_to"HOME" , root_path %>
+                                    <%= link_to"HOME" , root_path %>
                                     <%end%>
+									
+									</li>
+
 									<li><!-- SERVICES -->
 										<a href="#services" class="dropdown-toggle">
 											SERVICES
@@ -73,13 +77,13 @@
 										</a> -->
 										<ul class="dropdown-menu white-space= normal">
 											<li>
-												<a href="residential.html#vacuum-home">Residential</a>
+												<%= link_to"Residential" , pages_residential_path %>
 											</li>
 											<li>
-												<a href="commercial.html#observation-elevator">Commercial</a>
+												<<%= link_to"Commercial" , pages_commercial_path %>
 											</li>
 											<li>
-												<a href="quote.html#request-quote">Request A Quote</a>
+												<%= link_to"Quote" , pages_residential_path %>
 											</li>
 										</ul>
 									</li>

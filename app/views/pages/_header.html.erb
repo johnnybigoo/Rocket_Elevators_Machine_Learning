@@ -1,5 +1,6 @@
 
-			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+            
+            <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
             <!-- TOP NAV -->
             <header id="topNav">
@@ -25,9 +26,14 @@
                             <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
                                 <li class>
                                     <!-- HOME -->
+                                    <%if @index %>
                                     <a id="home-nav" class="scrollTo" href="#top">
                                         HOME
                                     </a>
+                                    <%else%>
+                                    <%= link_to"HOME" , root_path %>
+                                    
+                                    <%end%>
                                 </li>
                                 <li><!-- SERVICES -->
                                     <a href="#services" class="dropdown-toggle">
@@ -38,13 +44,13 @@
                                     </a> -->
                                     <ul class="dropdown-menu white-space= normal">
                                         <li>
-                                            <a href="residential.html#vacuum-home">Residential</a>
+                                            <%= link_to "Residential", pages_residential_path %>
                                         </li>
                                         <li>
-                                            <a href="commercial.html#observation-elevator">Commercial</a>
+                                            <%= link_to "Commercial", pages_commercial_path %>
                                         </li>
                                         <li>
-                                            <a href="quote.html#request-quote">Request A Quote</a>
+                                            <%= link_to "Request a Quote", pages_quote_path %>
                                         </li>
                                     </ul>
                                 </li>

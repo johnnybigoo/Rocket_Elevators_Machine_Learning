@@ -22,3 +22,5 @@
 //= require bootstrap.min
 //= require_tree .
 //= require owl.carousel
+//= require jquery-ui
+//= require bootstrap
