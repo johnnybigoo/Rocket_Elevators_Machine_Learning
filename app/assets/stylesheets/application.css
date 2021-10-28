@@ -1,11 +1,13 @@
 /*
  *= require_self
- *= require bootstrap/css/bootstrap.min 
+ *= require plugins/bootstrap/css/bootstrap.min
  *= require slider.revolution/css/extralayers
  *= require slider.revolution/css/settings
+ *= require owl.carousel
+ *= require owl.theme
  *= require css/essentials
  *= require css/layout
+ *= require css/quote-form
  *= require css/header-1
  *= require css/color_scheme/blue
- *= require css/quote-form
- */
+*/
