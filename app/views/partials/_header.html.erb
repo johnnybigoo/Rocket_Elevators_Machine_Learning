@@ -57,8 +57,13 @@
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
 									<li class>
 										<!-- HOME -->
-										<%= link_to "HOME", root_path, id:"home-nav", class:"scrollTo" %>
-									</li>
+                                    <%if @index %>
+                                    	<a id="home-nav" class="scrollTo" href="#top">
+                                        	HOME
+                                    	</a>
+                                    <%else%>
+                                    	<%= link_to"HOME" , root_path %>
+                                    <%end%>
 									<li><!-- SERVICES -->
 										<a href="#services" class="dropdown-toggle">
 											SERVICES
