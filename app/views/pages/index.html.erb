@@ -227,14 +227,14 @@
               <%= image_tag "_rocket/thompson_cbg_001_062.jpeg", :width=>"360", :height=>"240" %>	
 							<h3 class="mt-10">Residential</h3>
 							<p>Rocket Elevators offer you the chance to have your own customize elevator at home!</p>
-							<a href="residential.html#vacuum-home", class="btn btn-default">READ MORE</a>
+							<%= link_to "READ MORE" , pages_residential_path, class:"btn btn-default" %>
 						</div>
 
 						<div class="col-sm-4">
               <%= image_tag "_rocket/people-on-elevator-1.jpeg", :width=>"360", :height=>"240" %>
 							<h3 class="mt-10">Commercial</h3>
 							<p>We got the right team for your need.</p>
-							<a href="commercial.html#observation-elevator" class="btn btn-default">READ MORE</a>
+							<%= link_to "READ MORE" , pages_commercial_path, class:"btn btn-default" %>
 						</div>
 					</div>
 
@@ -252,7 +252,7 @@
 
 					<div class="text-center">
 						<h2 class="fs-40 fw-300">Engineering &amp; Maintenance, Since 1976</h2>
-						<a class="btn btn-default btn-lg" href="quote.html">GET A QUOTE <i class="fa fa-angle-right"></i></a> 
+						<a class="btn btn-default btn-lg" href="/pages/quote">GET A QUOTE <i class="fa fa-angle-right"></i></a> 
 						&nbsp; OR &nbsp;
 						<%= link_to root_path(anchor: "contact"), 'data-turbolinks': false do %>
 						<a class="btn btn-danger btn-lg" href="#contact">CONTACT US <i class="fa fa-angle-right"></i></a>
@@ -532,36 +532,95 @@
 
 			<!-- Testimonials -->
 			<section class="section-xs dark">
-				<div class="container">
-					<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
-						<div class="testimonial">
-							<figure>
+        <div class="container">
+          <div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
+            <div class="testimonial">
+              <figure>
                 <%= image_tag "_rocket/testimonials/1-CEO-Patrick-Thibault.jpeg", :class=>"rounded" %>
-							</figure>
-							<div class="testimonial-content p-0">
-								<p class="lead">CEO</p>
-								<cite>
-									Patrick Thibault
-									<span>Rocket Elevators</span>
-								</cite>
-							</div>
-						</div>
-						<div class="testimonial">
-							<figure>
+              </figure>
+              <div class="testimonial-content p-0">
+                <p class="lead">CEO</p>
+                <cite>
+                  Patrick Thibault
+                  <span>Rocket Elevators</span>
+                </cite>
+              </div>
+            </div>
+            <div class="testimonial">
+              <figure>
+                <%= image_tag "_rocket/testimonials/1-CEO-Perry.jpeg", :class=>"rounded" %>
+              </figure>
+              <div class="testimonial-content p-0">
+                <p class="lead">CEO</p>
+                <cite>
+                  Perry Sawatzky
+                  <span>Rocket Elevators</span>
+                </cite>
+              </div>
+            </div>
+            <div class="testimonial">
+              <figure>
                 <%= image_tag "_rocket/testimonials/2-employee-of-the-month.jpg", :class=>"rounded" %>
-							</figure>
-							<div class="testimonial-content p-0">
-								<p class="lead">Employee Of The Month</p>
-								<cite>
-									Jones Tavares
-									<span>Rocket Elevators</span>
-								</cite>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</section>
+              </figure>
+              <div class="testimonial-content p-0">
+                <p class="lead">Employees Of The Month</p>
+                <cite>
+                  Jones Tavares
+                  <span>Rocket Elevators</span>
+                </cite>
+              </div>
+            </div>
+            <div class="testimonial">
+              <figure>
+                <%= image_tag "_rocket/testimonials/3-Alex-Wallot.jpeg", :class=>"rounded" %>
+              </figure>
+              <div class="testimonial-content p-0">
+                <p class="lead">Employees Of The Month</p>
+                <cite>
+                  Alex Wallot
+                  <span>Rocket Elevators</span>
+                </cite>
+              </div>
+            </div>
+            <div class="testimonial">
+              <figure>
+                <%= image_tag "_rocket/testimonials/4-Alexandre-Gagne", :class=>"rounded" %>
+              </figure>
+              <div class="testimonial-content p-0">
+                <p class="lead">Employees Of The Month</p>
+                <cite>
+                  Alexandre Gagne
+                  <span>Rocket Elevators</span>
+                </cite>
+              </div>
+            </div>
+            <div class="testimonial">
+              <figure>
+                <%= image_tag "_rocket/testimonials/5-Kharshayar", :class=>"rounded" %>
+              </figure>
+              <div class="testimonial-content p-0">
+                <p class="lead">Employees Of The Month</p>
+                <cite>
+                  Khashayar Hedayati
+                  <span>Rocket Elevators</span>
+                </cite>
+              </div>
+            </div>
+            <div class="testimonial">
+              <figure>
+                <%= image_tag "_rocket/testimonials/6-Carl-Gregor.jpeg", :class=>"rounded" %>
+              </figure>
+              <div class="testimonial-content p-0">
+                <p class="lead">Employees Of The Month</p>
+                <cite>
+                  Carl-Gregor
+                  <span>Rocket Elevators</span>
+                </cite>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 			<!-- /Testimonials -->
 
 
