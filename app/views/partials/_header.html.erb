@@ -35,37 +35,35 @@
                     </a> -->
                     <ul class="dropdown-menu white-space= normal">
                       <li>
-                        <%= link_to"Residential" , pages_residential_path %>
+                        <%= link_to "RESIDENTIAL", pages_residential_path(anchor: "vacuum-home") %>
                       </li>
                       <li>
-                        <%= link_to"Commercial" , pages_commercial_path %>
+                        <%= link_to "COMMERCIAL", pages_commercial_path(anchor: "observation-elevator") %>
                       </li>
                       <li>
-                        <%= link_to "Request A Quote" , pages_quote_path %>
+                        <%= link_to "REQUEST A QUOTE", pages_quote_path(anchor: "request-quote") %>
                       </li>
                     </ul>
                   </li>
 
                                 <li><!-- PORTFOLIO -->
                                     <!-- id="portfolio-nav" -->
-                                    <a href="#portfolio">
-                                        PORTFOLIO
-                                    </a>
+                                    <%= link_to "PORTFOLIO", root_path(anchor: "portfolio") %>
                                 </li>
                                 <li><!-- NEWS -->
-                                    <a href="#news">
-                                        NEWS
-                                    </a>
+                                    <%= link_to "NEWS", 
+                                    root_path(anchor: "news") 
+                                    %>
                                 </li>
                                 <li><!-- CLIENTS -->
-                                    <a href="#clients">
-                                        CLIENTS
-                                    </a>
+                                    <%= link_to "CLIENTS", 
+                                    root_path(anchor: "clients") 
+                                    %>
                                 </li>
                                 <li><!-- CONTACT -->
-                                    <a href="#contact">
-                                        CONTACT
-                                    </a>
+                                    <%= link_to "CONTACT", 
+                                    root_path(anchor: "contact") 
+                                    %>
                                 </li>
                                 <% if user_signed_in? %>
                                     <li><!-- SIGN OUT -->
@@ -88,3 +86,198 @@
         </header>
         <!-- /Top Nav -->
       </div>
+      <!-- REVOLUTION SLIDER -->
+			<div class="slider fullwidthbanner-container roundedcorners">
+
+				<div class="fullwidthbanner" data-height="600" data-shadow="0" data-navigationstyle="preview2">
+					<ul class="hide">
+					
+						<!-- SLIDE  -->
+						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Safety">
+							<!-- MAIN IMAGE -->
+              <%= image_tag "_rocket/3-main-elevators.jpeg", data:{:bgposition=>"center top", :bgfit=>"cover", :bgrepeat=>"no-repeat"} %>
+
+							<div class="tp-caption white_big skewfromleft tp-resizeme"
+								data-x="471"
+								data-y="100" 
+								data-speed="400"
+								data-start="1500"
+								data-easing="Power3.easeInOut"
+								data-splitin="words"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="600"
+								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+									Rocket Elevators
+							</div>
+
+							<div class="tp-caption content_text_center skewfromleft tp-resizeme"
+								data-x="530"
+								data-y="195" 
+								data-speed="500"
+								data-start="2000"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="600"
+
+								style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
+									Elevate you home or your commercial building, <br />
+									Safety, Speed and Style.
+							</div>
+
+							<div class="tp-caption tp-fade"
+								data-x="left"
+								data-y="25" 
+								data-speed="300"
+								data-start="800"
+								data-easing="Power3.easeInOut"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="300"
+								style="z-index: 4;">
+							</div>
+
+							<div class="tp-caption skewfromleft tp-resizeme  un-button-2-lg"
+								data-x="665"
+								data-y="300" 
+								data-speed="300"
+								data-start="2500"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="300"
+
+								style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+									<%= link_to "GET A QUOTE", pages_quote_path, class:"btn btn-danger btn-lg" %>
+									<i class="fa fa-angle-right"></i>
+
+							</div>
+						</li> 
+
+						<!-- SLIDE  -->
+						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off" data-title="Residential">
+							<!-- MAIN IMAGE -->
+              <%= image_tag "_rocket/residential-elevator.jpeg", data:{:bgposition=>"center top", :bgfit=>"cover", :bgrepeat=>"no-repeat"} %>
+
+							<div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
+
+							<div class="tp-caption font-roboto skewfromleft tp-resizeme"
+								data-x="50"
+								data-y="100" 
+								data-speed="500"
+								data-start="1500"
+								data-easing="Cubic.easeOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+									Residential Elevators  <br />
+									Made affordable
+									
+							</div>
+
+							<div class="tp-caption skewfromrightshort tp-resizeme"
+								data-x="50"
+								data-y="300" 
+								data-speed="500"
+								data-start="1000"
+								data-easing="easeInCirc"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
+									The high-end quality of Our Residential Elevators <br />
+									is unequaled.
+							</div>
+
+							<div class="tp-caption sfb tp-resizeme"
+								data-x="50"
+								data-y="410" 
+								data-speed="500"
+								data-start="1500"
+								data-easing="Power3.easeIn"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 4; max-width: auto;">
+									<%= link_to "RESIDENTIAL SERVICES", pages_residential_path, class:"btn btn-danger btn-lg" %>
+									<i class="fa fa-angle-right"></i>
+
+							</div>
+						</li>
+
+						<!-- SLIDE  -->
+						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off" data-title="Commercial">
+							<!-- MAIN IMAGE -->
+              <%= image_tag "_rocket/3-commercial-elevators.jpeg", data:{:bgposition=>"center top", :bgfit=>"cover", :bgrepeat=>"no-repeat"} %>
+
+							<div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
+
+							<div class="tp-caption font-roboto skewfromleft tp-resizeme"
+								data-x="50"
+								data-y="100" 
+								data-speed="500"
+								data-start="1500"
+								data-easing="Cubic.easeOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+									A High end brand for <br />
+									Commercial Elevators 
+									
+							</div>
+
+							<div class="tp-caption skewfromrightshort tp-resizeme"
+								data-x="50"
+								data-y="300" 
+								data-speed="500"
+								data-start="1000"
+								data-easing="easeInCirc"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
+									From London to Tokyo... <br />
+									our Lifts impress!
+							</div>
+
+							<div class="tp-caption sfb tp-resizeme"
+								data-x="50"
+								data-y="410" 
+								data-speed="500"
+								data-start="1500"
+								data-easing="Power3.easeIn"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 4; max-width: auto;">
+									<%= link_to "COMMERCIAL SERVICES ", pages_commercial_path, class:"btn btn-danger btn-lg" %>
+									<i class="fa fa-angle-right"></i>
+							</div>
+
+						</li>
+
+					</ul>
+
+				</div>
+			</div>
+			<!-- /REVOLUTION SLIDER -->
