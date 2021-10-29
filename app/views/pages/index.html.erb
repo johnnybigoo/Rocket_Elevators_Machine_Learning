@@ -69,7 +69,7 @@
 									<%= link_to "GET A QUOTE", pages_quote_path, class:"btn btn-danger btn-lg" %>
 									<i class="fa fa-angle-right"></i>
 							</div>
-						</li>
+						</li> 
 
 						<!-- SLIDE  -->
 						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off" data-title="Residential">
@@ -181,7 +181,7 @@
 								data-endspeed="500"
 								style="z-index: 4; max-width: auto;">
 									<%= link_to "COMMERCIAL SERVICES ", pages_commercial_path, class:"btn btn-danger btn-lg" %>
-									<i class="fa fa-angle-right"></i></a>
+									<i class="fa fa-angle-right"></i>
 							</div>
 
 						</li>
@@ -224,14 +224,18 @@
               <%= image_tag "_rocket/thompson_cbg_001_062.jpeg", :width=>"360", :height=>"240" %>	
 							<h3 class="mt-10">Residential</h3>
 							<p>Rocket Elevators offer you the chance to have your own customize elevator at home!</p>
+							<%= link_to pages_residential_path(anchor: "residential"), 'data-turbolinks': false do %>
 							<a href="residential.html#vacuum-home" class="btn btn-default">READ MORE</a>
+							<% end %>
 						</div>
 
 						<div class="col-sm-4">
               <%= image_tag "_rocket/people-on-elevator-1.jpeg", :width=>"360", :height=>"240" %>
 							<h3 class="mt-10">Commercial</h3>
 							<p>We got the right team for your need.</p>
+							<%= link_to pages_commercial_path(anchor: "commercial"), 'data-turbolinks': false do %>
 							<a href="commercial.html#observation-elevator" class="btn btn-default">READ MORE</a>
+							<% end %>
 						</div>
 					</div>
 
@@ -291,8 +295,7 @@
 
 								<div class="item-box">
 									<figure>
-                    <%= image_path "_rocket/portfolio/corp/600x300/1-commercial-3-burj-resize.jpeg", :alt => "image", :class => "img-fluid", :width => "600", :height => "399" %>
-
+										<%= image_tag "_rocket/portfolio/corp/600x300/1-commercial-3-burj-resize.jpeg", :alt => "image", :class => "img-fluid", :width => "600", :height => "399" %>
 									</figure>
 
 									<div class="item-box-desc">
@@ -530,6 +533,7 @@
 			<!-- Testimonials -->
 			<section class="section-xs dark">
 				<div class="container">
+
 					<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
 						<div class="testimonial">
 							<figure>
@@ -545,12 +549,72 @@
 						</div>
 						<div class="testimonial">
 							<figure>
+                <%= image_tag "_rocket/testimonials/1-CEO-Perry.jpeg", :class=>"rounded" %>
+							</figure>
+							<div class="testimonial-content p-0">
+								<p class="lead">CEO</p>
+								<cite>
+									Perry Sawatzky
+									<span>Rocket Elevators</span>
+								</cite>
+							</div>
+						</div>
+						<div class="testimonial">
+							<figure>
                 <%= image_tag "_rocket/testimonials/2-employee-of-the-month.jpg", :class=>"rounded" %>
 							</figure>
 							<div class="testimonial-content p-0">
-								<p class="lead">Employee Of The Month</p>
+								<p class="lead">Employees Of The Month</p>
 								<cite>
 									Jones Tavares
+									<span>Rocket Elevators</span>
+								</cite>
+							</div>
+						</div>
+						<div class="testimonial">
+							<figure>
+                <%= image_tag "_rocket/testimonials/3-Alex-Wallot.jpeg", :class=>"rounded" %>
+							</figure>
+							<div class="testimonial-content p-0">
+								<p class="lead">Employees Of The Month</p>
+								<cite>
+									Alex Wallot
+									<span>Rocket Elevators</span>
+								</cite>
+							</div>
+						</div>
+						<div class="testimonial">
+							<figure>
+                <%= image_tag "_rocket/testimonials/4-Alexandre-Gagne", :class=>"rounded" %>
+							</figure>
+							<div class="testimonial-content p-0">
+								<p class="lead">Employees Of The Month</p>
+								<cite>
+									Alexandre Gagne
+									<span>Rocket Elevators</span>
+								</cite>
+							</div>
+						</div>
+						<div class="testimonial">
+							<figure>
+                <%= image_tag "_rocket/testimonials/5-Kharshayar", :class=>"rounded" %>
+							</figure>
+							<div class="testimonial-content p-0">
+								<p class="lead">Employees Of The Month</p>
+								<cite>
+									Khashayar Hedayati
+									<span>Rocket Elevators</span>
+								</cite>
+							</div>
+						</div>
+						<div class="testimonial">
+							<figure>
+                <%= image_tag "_rocket/testimonials/6-Carl-Gregor.jpeg", :class=>"rounded" %>
+							</figure>
+							<div class="testimonial-content p-0">
+								<p class="lead">Employees Of The Month</p>
+								<cite>
+									Carl-Gregor
 									<span>Rocket Elevators</span>
 								</cite>
 							</div>
@@ -907,7 +971,7 @@
 							<p>
 								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 418-725 Boulevard Lebourgneuf, Québec, QC G2J 0C4, Canada</span>
 								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1800-555-1234">(418) 555-1234</a></span>
-								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="/cdn-cgi/l/email-protection#e68f888089a68589828384899e9ec885898b"><span class="__cf_email__" data-cfemail="442d2a222b04272b2021262b3c3c6a272b29">[email&#160;protected]</span></a></span>
+								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="/cdn-cgi/l/info@codeboxx.com"><span class="__cf_email__" data-cfemail="442d2a222b04272b2021262b3c3c6a272b29">info@codeboxx.com</span></a></span>
 							</p>
 
 						</div>
