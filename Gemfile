@@ -33,12 +33,15 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap', '~> 4.4.1'
-gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+
+gem 'jquery-rails'
+
 gem 'rails-ujs', '~> 0.1.0'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'font-awesome-sass', '~> 4.3.0'
 gem 'jquery-ui-rails'
 gem 'bootstrap-social-rails'
+
 
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -57,6 +60,11 @@ group :development do
 
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'capistrano', '~> 3.10', require: false
+  gem 'capistrano-rails', '~> 1.4', require: false
+  gem 'capistrano-bundler', '>= 1.1.0'
+  gem 'rvm1-capistrano3', require: false
+  gem 'capistrano3-puma'
 end
 
 group :test do
@@ -75,4 +83,10 @@ gem 'owlcarousel-rails'
 
 gem 'rails_admin', '~> 2.0'
 
+gem 'jquery-ui-rails'
 
+
+
+gem 'execjs'
+
+gem 'therubyracer', :platforms => :ruby
