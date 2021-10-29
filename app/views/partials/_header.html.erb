@@ -1,91 +1,94 @@
 
-
-
-		<!-- wrapper -->
-		<div id="wrapper">
-
 			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
-				<!-- TOP NAV -->
-				<header id="topNav">
-					<div class="container">
+            <!-- TOP NAV -->
+            <header id="topNav">
+                <div class="container">
 
-						<!-- Mobile Menu Button -->
-						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
-							<i class="fa fa-bars"></i>
-						</button>
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
 
-						<!-- Logo -->
-						<!-- scrollTo -->
-						<a class="logo float-left scrollTo" href="#top">
-              				<%= image_tag "_rocket/R2.png", :alt => "cover image", :data_bgposition => "center top", :data_bgfit => "cover", :data_bgrepeat => "no-repeat" %>
-						</a>
+                    <!-- Logo -->
+                    <!-- scrollTo -->
+                    <a class="logo float-left scrollTo" href="#top">
+                        <!-- img src="assets/images/_rocket/R2.png" alt="" / -->
+                        <%= image_tag "_rocket/R2.png", :alt => "cover image", :data_bgposition => "center top", :data_bgfit => "cover", :data_bgrepeat => "no-repeat" %>
 
-						<!-- Top Nav -->
-						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
-							<nav class="nav-main">
+                    </a>
 
-								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-									<li class>
-										<!-- HOME -->
-                                    <%= link_to"HOME" , root_path %>
-									</li>
-									<li><!-- SERVICES -->
-										<a href="#services" class="dropdown-toggle">
-											SERVICES
-										</a>
-										<ul class="dropdown-menu white-space= normal">
-											<li>
-												<%= link_to"Residential" , pages_residential_path %>
-											</li>
-											<li>
-												<<%= link_to"Commercial" , pages_commercial_path %>
-											</li>
-											<li>
-												<%= link_to"Quote" , pages_quote_path %>
-											</li>
-										</ul>
-									</li>
+                    <!-- Top Nav -->
+                    <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+                        <nav class="nav-main">
 
-									<li><!-- PORTFOLIO -->
-										<!-- id="portfolio-nav" -->
-										<a href="#portfolio">
-											PORTFOLIO
-										</a>
-									</li>
-									<li><!-- NEWS -->
-										<a href="#news">
-											NEWS
-										</a>
-									</li>
-									<li><!-- CLIENTS -->
-										<a href="#clients">
-											CLIENTS
-										</a>
-									</li>
-									<li><!-- CONTACT -->
-										<a href="#contact">
-											CONTACT
-										</a>
-									</li>
-									<li><!-- ADMIN -->
-										<%= link_to "SIGN IN", new_user_session_path %>
-										<% if user_signed_in? %>
-                                    		<li><!-- SIGN OUT -->
-                                        	<%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %>
-                                    		</li>
-											<li><!-- ADMIN -->
-                                        	<%= link_to "ADMIN", rails_admin_path %>
-                                    		</li>
-                                		<% end %>
-									</li>
-								</ul>
+                            <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                                <li class>
+                                    <!-- HOME -->
+                                    <%if @index %>
+                                    <a id="home-nav" class="scrollTo" href="#top">
+                                        HOME
+                                    </a>
+                                    <%else%>
+                                        <%= link_to "HOME" , root_path %>
+                                    <%end%>
+                                </li>
+                                <li><!-- SERVICES -->
+                                    <a href="#services" class="dropdown-toggle">
+                                        SERVICES
+                                    </a>
+                                    <!-- <a href="#services">
+                                        SERVICES
+                                    </a> -->
+                                    <ul class="dropdown-menu white-space= normal">
+                                        <li>
+                                            <a href="residential.html#vacuum-home">Residential</a>
+                                        </li>
+                                        <li>
+                                            <a href="commercial.html#observation-elevator">Commercial</a>
+                                        </li>
+                                        <li>
+                                            <a href="quote.html#request-quote">Request A Quote</a>
+                                        </li>
+                                    </ul>
+                                </li>
 
-							</nav>
-						</div>
+                                <li><!-- PORTFOLIO -->
+                                    <!-- id="portfolio-nav" -->
+                                    <a href="#portfolio">
+                                        PORTFOLIO
+                                    </a>
+                                </li>
+                                <li><!-- NEWS -->
+                                    <a href="#news">
+                                        NEWS
+                                    </a>
+                                </li>
+                                <li><!-- CLIENTS -->
+                                    <a href="#clients">
+                                        CLIENTS
+                                    </a>
+                                </li>
+                                <li><!-- CONTACT -->
+                                    <a href="#contact">
+                                        CONTACT
+                                    </a>
+                                </li>
+                                <% if user_signed_in? %>
+                                    <li><!-- SIGN OUT -->
+                                        <%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %>
+                                    </li>
+                                <% else %>
+                                    <li><!-- SIGN IN -->
+                                        <%= link_to "SIGN IN", new_user_session_path %>
+                                    </li>
+                                <% end %>
+                            </ul>
 
-					</div>
-				</header>
-				<!-- /Top Nav -->
+                        </nav>
+                    </div>
 
-			</div>
+                </div>
+            </header>
+            <!-- /Top Nav -->
+            </div>

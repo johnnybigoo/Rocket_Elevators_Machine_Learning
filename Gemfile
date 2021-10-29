@@ -33,7 +33,14 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap', '~> 4.4.1'
+
 gem 'jquery-rails'
+
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'rails-ujs', '~> 0.1.0'
+
+# gem 'jquery-rails'
+
 
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -76,6 +83,8 @@ gem 'owlcarousel-rails'
 gem 'rails_admin', '~> 2.0'
 
 gem 'jquery-ui-rails'
+
+
 
 gem 'execjs'
 
