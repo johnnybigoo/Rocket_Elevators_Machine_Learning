@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="http://rocketelevators-jt.com/assets/images/_rocket/R2.png">
+  <a href="https://rocketlift.ca/assets/_rocket/R2-3c6296bf2343b849b947f8ccfce0de61dd34ba7f9e2a23a53d0a743bc4604e3c.png">
     <img src="/Users/Jones_Mac/CodeBoxx/Odyssey/Week-4/Rocket_Elevators_Information_System/app/assets/images/_rocket/R2.png" alt="Logo" width="500" height="200">
   </a>
 
