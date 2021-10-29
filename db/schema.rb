@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_10_26_161314) do
 
-  create_table "employees", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "employees", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.string "title", null: false
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2021_10_26_161314) do
     t.index ["user_id"], name: "fk_rails_dcfd3d4fc3"
   end
 
-  create_table "quotes", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "quotes", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "type_building", null: false
     t.integer "numApartment"
     t.integer "numFloor"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2021_10_26_161314) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "email", null: false
     t.text "password", null: false
     t.datetime "date_created", null: false

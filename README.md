@@ -1,24 +1,40 @@
-# README
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="http://rocketelevators-jt.com/assets/images/_rocket/R2.png">
+    <img src="/Users/Jones_Mac/CodeBoxx/Odyssey/Week-4/Rocket_Elevators_Information_System/app/assets/images/_rocket/R2.png" alt="Logo" width="500" height="200">
+  </a>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  <h3 align="center">Rocket Elevators Information System</h3>
+  
+  <p align="center">
+    Odyssey Program - Week 4
+  </p>
+</p>
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-* Configuration
+Rocket Elevators is a starting project for the Genesis 2 weeks program in CodeBoxx. 
 
-* Database creation
+We have created a fictitious company website using a bootstrap 4.0 template, where we have modified it, and adapted to client requests.
 
-* Database initialization
+## Website deployed
+[rocketlift.ca](https://rocketlift.ca/)
 
-* How to run the test suite
+### Built With
+* [Ruby on Rails]()
+* [MySql]()
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+<!-- CONTACT -->
+## Contact
+
+Jones Tavares - [LinkedIn](https://www.linkedin.com/in/jonestavares/) - jotalico@icloud.com
+
+Project Link: [https://github.com/johnnybigoo/RocketElevatorsDigitalPresence](https://github.com/johnnybigoo/RocketElevatorsDigitalPresence)
