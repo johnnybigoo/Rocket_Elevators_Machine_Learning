@@ -7,13 +7,6 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-<<<<<<< HEAD
-    <%= yield(:head_tags) %>
-    
-    <script>
-      var plugin_path = 'assets/plugins/';
-    </script>
-=======
 
     <%= yield(:head_tags) %>
 
@@ -21,7 +14,6 @@
       var plugin_path = 'assets/plugins/'
     </script>
 
->>>>>>> ca374474346744191c17b41fa2185908a02a104e
   </head>
 
   <body>
@@ -29,11 +21,7 @@
     <%= yield %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-<<<<<<< HEAD
-    <%= render "partials/footer" %>
-=======
     <%= render 'partials/footer' %>
     <%= yield :after_js %>
->>>>>>> ca374474346744191c17b41fa2185908a02a104e
   </body>
 </html>
