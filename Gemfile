@@ -79,4 +79,4 @@ gem 'jquery-ui-rails'
 
 gem 'execjs'
 
-gem 'therubyracer'
+gem 'therubyracer', :platforms => :ruby
