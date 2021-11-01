@@ -180,18 +180,41 @@ $('#reset').click(function () {
 //.Submit button
 $('#submit').on('click', function (event) {
     alert("Thank you!! Your form has been submitted.");
-    event.preventDefault();
-    var numApartments = $('#input_apartments').val();
-    var numCompanies = $('#input_acompanies').val();
-    var numBusinesses = $('#input_businesses').val();
-    var numFloorsHyb = $('#input_floorsHyb').val();
-    var numFloorsRes = $('#input_floorsRes').val();
-    var numOccupants = $('#input_occupants').val();
-    var numElevators = $(numElevators).val();
-    console.log(typeBuilding, numApartments, numCompanies, numBusinesses, numFloorsHyb, numFloorsRes, numOccupants, numElevators);
+    var typeBuilding = $(".type-answer").serialize();
+    var quote = $("#fields").serialize();
 
-    var typeBuilding = $("input:checkbox[name=radio-btn]:checked").each(function () {
-        console.log("Type of building: " + $(this).attr("id") + "Value: " + $(this).val());
-    });
+    // var arr = $('form').serializeArray(),
+    //     names = (function () {
+    //         var n = [],
+    //             l = arr.length - 1;
+    //         for (; l >= 0; l--) {
+    //             n.push(arr[l].name);
+    //         }
+
+    //         return n;
+    //     })();
+
+    // $('input[type="checkbox"]:not(:checked)').each(function () {
+    //     if ($.inArray(this.name, names) === -1) {
+    //         arr.push({ name: this.name, value: 'off' });
+    //     }
+    // });
+
+    // console.log(arr);
+    // alert("Thank you!! Your form has been submitted.");
+    // event.preventDefault();
+    // var numApartments = $('#input_apartments').val();
+    // var numCompanies = $('#input_acompanies').val();
+    // var numBusinesses = $('#input_businesses').val();
+    // var numFloorsHyb = $('#input_floorsHyb').val();
+    // var numFloorsRes = $('#input_floorsRes').val();
+    // var numOccupants = $('#input_occupants').val();
+    // var numElevators = $(numElevators).val();
+    // console.log(typeBuilding, numApartments, numCompanies, numBusinesses, numFloorsHyb, numFloorsRes, numOccupants, numElevators);
+
+    // var typeBuilding = $("input:checkbox[name=radio-btn]:checked").each(function () {
+    //     console.log("Type of building: " + $(this).attr("id") + "Value: " + $(this).val());
+    // });
+    console.log(typeBuilding, quote);
 });
 
