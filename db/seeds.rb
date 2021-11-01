@@ -28,6 +28,9 @@ User.create(id: 19,email: 'abdul.akeeb@codebozz.biz',password: 'password')
 User.create(id: 20,email: 'krista.sheely@codeboxx.biz',password: 'password')
 User.create(id: 21,email: 'jonathan.murray@codeboxx.biz',password: 'password')
 
+Quote.create(id: 1, type_building: "allo")
+Quote.create(id: 2, type_building: "allo")
+
 Employee.create(id: 1,first_name: 'Nicolas',last_name: 'Genest',title: 'CEO',email: 'nicolas.genest@codeboxx.biz',user_id: 1)
 Employee.create(id: 2,first_name: 'Nadya',last_name: 'Fortier',title: 'Director',email: 'nadya.fortier@codeboxx.biz',user_id: 2)
 Employee.create(id: 3,first_name: 'Martin',last_name: 'Chantal',title: 'Assistant Director ',email: 'martin.chantal@codeboxx.biz',user_id: 3)
