@@ -12,6 +12,8 @@ var totalNumberOccupants = 0;
 var elevatorsPrice = 0;
 var installationFees = 0;
 var radioValue = 0;
+var formData = {};
+var typeBuilding = "";
 
 // Begin
 $(document).ready(function () {
@@ -175,4 +177,21 @@ $('#reset').click(function () {
     clear();
 });
 
+//.Submit button
+$('#submit').on('click', function (event) {
+    alert("Thank you!! Your form has been submitted.");
+    event.preventDefault();
+    var numApartments = $('#input_apartments').val();
+    var numCompanies = $('#input_acompanies').val();
+    var numBusinesses = $('#input_businesses').val();
+    var numFloorsHyb = $('#input_floorsHyb').val();
+    var numFloorsRes = $('#input_floorsRes').val();
+    var numOccupants = $('#input_occupants').val();
+    var numElevators = $(numElevators).val();
+    console.log(typeBuilding, numApartments, numCompanies, numBusinesses, numFloorsHyb, numFloorsRes, numOccupants, numElevators);
+
+    var typeBuilding = $("input:checkbox[name=radio-btn]:checked").each(function () {
+        console.log("Type of building: " + $(this).attr("id") + "Value: " + $(this).val());
+    });
+});
 
