@@ -1,117 +1,284 @@
-<!-- SLIDE TOP -->
-		<div id="slidetop">
-
-			<div class="container">
-				
-				<div class="row">
-
-					<div class="col-md-4">
-						<h6><i class="icon-heart"></i> WHY ROCKET ELEVATORS?</h6>
-						<p>We have the conviction that we create the most innovative and reliable products on the market. Contact us today for any questions you might have. </p>
-					</div>
-
-					<div class="col-md-4">
-						<h6><i class="icon-envelope"></i> CONTACT INFO</h6>
-						<ul class="list-unstyled">
-							<li><b>Address:</b> Address: 418-725 Boulevard Lebourgneuf, <br /> 
-								Quebec City - QC, G2J 0C4  <br /> Canada</li>
-							<li><b>Phone:</b> (418) 555-1234</li>
-							<li><b>Email:</b> <a href="/cdn-cgi/l/email-protection#fc95929a93bc9f9398999e938484d29e9586"><span class="__cf_email__" data-cfemail="3950575f56795a565d5c5b564141175b5043">[email&#160;protected]</span></a></li>
-						</ul>
-					</div>
-
-				</div>
-
-			</div>
-
-			<a class="slidetop-toggle" href="#"><!-- toggle button --></a>
-
-		</div>
-		<!-- /SLIDE TOP -->
-
-
-		<!-- wrapper -->
-		<div id="wrapper">
 
 			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
-				<!-- TOP NAV -->
-				<header id="topNav">
-					<div class="container">
+        <!-- TOP NAV -->
+        <header id="topNav">
+          <div class="container">
 
-						<!-- Mobile Menu Button -->
-						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
-							<i class="fa fa-bars"></i>
-						</button>
+            <!-- Mobile Menu Button -->
+            <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+              <i class="fa fa-bars"></i>
+            </button>
 
-						<!-- Logo -->
-						<!-- scrollTo -->
-						<a class="logo float-left scrollTo" href="#top">
-              <%= image_tag "_rocket/R2.png" %>
-						</a>
+            <!-- Logo -->
+            <!-- scrollTo -->
+            <a class="logo float-left scrollTo" href="#top">
+              <!-- img src="assets/images/_rocket/R2.png" alt="" / -->
+              <%= image_tag "_rocket/R2.png", :alt => "cover image", :data_bgposition => "center top", :data_bgfit => "cover", :data_bgrepeat => "no-repeat" %>
+            </a>
 
-						<!-- Top Nav -->
-						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
-							<nav class="nav-main">
+            <!-- Top Nav -->
+            <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+              <nav class="nav-main">
 
-								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-									<li class>
-										<!-- HOME -->
-										<%= link_to "HOME", root_path, id:"home-nav", class:"scrollTo" %>
-									</li>
-									<li><!-- SERVICES -->
-										<a href="#services" class="dropdown-toggle">
-											SERVICES
-										</a>
-										<!-- <a href="#services">
-											SERVICES
-										</a> -->
-										<ul class="dropdown-menu white-space= normal">
-											<li>
-												<a href="residential.html#vacuum-home">Residential</a>
-											</li>
-											<li>
-												<a href="commercial.html#observation-elevator">Commercial</a>
-											</li>
-											<li>
-												<a href="quote.html#request-quote">Request A Quote</a>
-											</li>
-										</ul>
-									</li>
+                <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                  <li class>
+                      <!-- HOME -->
+                      <%= link_to "HOME" , root_path %>
+                  </li>
+                  <li><!-- SERVICES -->
+                    <a href="#services" class="dropdown-toggle">
+                      SERVICES
+                    </a>
+                    <!-- <a href="#services">
+                      SERVICES
+                    </a> -->
+                    <ul class="dropdown-menu white-space= normal">
+                      <li>
+                        <%= link_to "RESIDENTIAL", pages_residential_path(anchor: "vacuum-home") %>
+                      </li>
+                      <li>
+                        <%= link_to "COMMERCIAL", pages_commercial_path(anchor: "observation-elevator") %>
+                      </li>
+                      <li>
+                        <%= link_to "REQUEST A QUOTE", pages_quote_path(anchor: "request-quote") %>
+                      </li>
+                    </ul>
+                  </li>
 
-									<li><!-- PORTFOLIO -->
-										<!-- id="portfolio-nav" -->
-										<a href="#portfolio">
-											PORTFOLIO
-										</a>
-									</li>
-									<li><!-- NEWS -->
-										<a href="#news">
-											NEWS
-										</a>
-									</li>
-									<li><!-- CLIENTS -->
-										<a href="#clients">
-											CLIENTS
-										</a>
-									</li>
-									<li><!-- CONTACT -->
-										<a href="#contact">
-											CONTACT
-										</a>
-									</li>
-									<li><!-- ADMIN -->
-										<a href="#admin">
-											ADMIN
-										</a>
-									</li>
-								</ul>
+                                <li><!-- PORTFOLIO -->
+                                    <!-- id="portfolio-nav" -->
+                                    <%= link_to "PORTFOLIO", root_path(anchor: "portfolio") %>
+                                </li>
+                                <li><!-- NEWS -->
+                                    <%= link_to "NEWS", 
+                                    root_path(anchor: "news") 
+                                    %>
+                                </li>
+                                <li><!-- CLIENTS -->
+                                    <%= link_to "CLIENTS", 
+                                    root_path(anchor: "clients") 
+                                    %>
+                                </li>
+                                <li><!-- CONTACT -->
+                                    <%= link_to "CONTACT", 
+                                    root_path(anchor: "contact") 
+                                    %>
 
-							</nav>
-						</div>
+                                </li>
+                                <% if user_signed_in? %>
+                                    <li><!-- SIGN OUT -->
+                                        <%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %>
+                                    </li>
+                                    <li>
+                                        <%= link_to "ADMIN", rails_admin_path %>
+                                    </li>
+                                <% else %>
+                                    <li><!-- SIGN IN -->
+                                        <%= link_to "SIGN IN", new_user_session_path %>
+                                    </li>
+                                <% end %>
+                            </ul>
 
-					</div>
-				</header>
-				<!-- /Top Nav -->
+              </nav>
+            </div>
 
+          </div>
+        </header>
+        <!-- /Top Nav -->
+      </div>
+      <!-- REVOLUTION SLIDER -->
+			<div class="slider fullwidthbanner-container roundedcorners">
+
+				<div class="fullwidthbanner" data-height="600" data-shadow="0" data-navigationstyle="preview2">
+					<ul class="hide">
+					
+						<!-- SLIDE  -->
+						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Safety">
+							<!-- MAIN IMAGE -->
+              <%= image_tag "_rocket/3-main-elevators.jpeg", data:{:bgposition=>"center top", :bgfit=>"cover", :bgrepeat=>"no-repeat"} %>
+
+							<div class="tp-caption white_big skewfromleft tp-resizeme"
+								data-x="471"
+								data-y="100" 
+								data-speed="400"
+								data-start="1500"
+								data-easing="Power3.easeInOut"
+								data-splitin="words"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="600"
+								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+									Rocket Elevators
+							</div>
+
+							<div class="tp-caption content_text_center skewfromleft tp-resizeme"
+								data-x="530"
+								data-y="195" 
+								data-speed="500"
+								data-start="2000"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="600"
+
+								style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
+									Elevate you home or your commercial building, <br />
+									Safety, Speed and Style.
+							</div>
+
+							<div class="tp-caption tp-fade"
+								data-x="left"
+								data-y="25" 
+								data-speed="300"
+								data-start="800"
+								data-easing="Power3.easeInOut"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="300"
+								style="z-index: 4;">
+							</div>
+
+							<div class="tp-caption skewfromleft tp-resizeme  un-button-2-lg"
+								data-x="665"
+								data-y="300" 
+								data-speed="300"
+								data-start="2500"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="300"
+
+								style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+									<%= link_to "GET A QUOTE", pages_quote_path, class:"btn btn-danger btn-lg" %>
+									<i class="fa fa-angle-right"></i>
+
+							</div>
+						</li> 
+
+						<!-- SLIDE  -->
+						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off" data-title="Residential">
+							<!-- MAIN IMAGE -->
+              <%= image_tag "_rocket/residential-elevator.jpeg", data:{:bgposition=>"center top", :bgfit=>"cover", :bgrepeat=>"no-repeat"} %>
+
+							<div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
+
+							<div class="tp-caption font-roboto skewfromleft tp-resizeme"
+								data-x="50"
+								data-y="100" 
+								data-speed="500"
+								data-start="1500"
+								data-easing="Cubic.easeOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+									Residential Elevators  <br />
+									Made affordable
+									
+							</div>
+
+							<div class="tp-caption skewfromrightshort tp-resizeme"
+								data-x="50"
+								data-y="300" 
+								data-speed="500"
+								data-start="1000"
+								data-easing="easeInCirc"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
+									The high-end quality of Our Residential Elevators <br />
+									is unequaled.
+							</div>
+
+							<div class="tp-caption sfb tp-resizeme"
+								data-x="50"
+								data-y="410" 
+								data-speed="500"
+								data-start="1500"
+								data-easing="Power3.easeIn"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 4; max-width: auto;">
+									<%= link_to "RESIDENTIAL SERVICES", pages_residential_path, class:"btn btn-danger btn-lg" %>
+									<i class="fa fa-angle-right"></i>
+
+							</div>
+						</li>
+
+						<!-- SLIDE  -->
+						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off" data-title="Commercial">
+							<!-- MAIN IMAGE -->
+              <%= image_tag "_rocket/3-commercial-elevators.jpeg", data:{:bgposition=>"center top", :bgfit=>"cover", :bgrepeat=>"no-repeat"} %>
+
+							<div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
+
+							<div class="tp-caption font-roboto skewfromleft tp-resizeme"
+								data-x="50"
+								data-y="100" 
+								data-speed="500"
+								data-start="1500"
+								data-easing="Cubic.easeOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+									A High end brand for <br />
+									Commercial Elevators 
+									
+							</div>
+
+							<div class="tp-caption skewfromrightshort tp-resizeme"
+								data-x="50"
+								data-y="300" 
+								data-speed="500"
+								data-start="1000"
+								data-easing="easeInCirc"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
+									From London to Tokyo... <br />
+									our Lifts impress!
+							</div>
+
+							<div class="tp-caption sfb tp-resizeme"
+								data-x="50"
+								data-y="410" 
+								data-speed="500"
+								data-start="1500"
+								data-easing="Power3.easeIn"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 4; max-width: auto;">
+									<%= link_to "COMMERCIAL SERVICES ", pages_commercial_path, class:"btn btn-danger btn-lg" %>
+									<i class="fa fa-angle-right"></i>
+							</div>
+
+						</li>
+
+					</ul>
+
+				</div>
 			</div>
+			<!-- /REVOLUTION SLIDER -->
