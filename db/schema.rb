@@ -12,10 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_11_01_161503) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "addresses", force: :cascade do |t|
+  create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "typeAddress", null: false
     t.string "status", null: false
     t.string "entity", null: false
@@ -29,7 +26,8 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "batteries", force: :cascade do |t|
+
+  create_table "batteries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "buildingId", null: false
     t.string "type", null: false
     t.string "status", null: false
@@ -43,7 +41,7 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "building_details", force: :cascade do |t|
+  create_table "building_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "buildingId", null: false
     t.string "informationKey", null: false
     t.string "value", null: false
@@ -51,7 +49,8 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "buildings", force: :cascade do |t|
+
+  create_table "buildings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "customerId", null: false
     t.bigint "addressId", null: false
     t.string "fullNameAdministrator", null: false
@@ -64,7 +63,7 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "columns", force: :cascade do |t|
+  create_table "columns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "batteryId", null: false
     t.string "type", null: false
     t.string "numberFloorServed", null: false
@@ -75,7 +74,7 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "customers", force: :cascade do |t|
+  create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.integer "userId", null: false
     t.datetime "dateCreation", null: false
     t.string "compagnyName", null: false
@@ -91,7 +90,8 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "elevators", force: :cascade do |t|
+
+  create_table "elevators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "columnId", null: false
     t.string "serialNumber", null: false
     t.string "model", null: false
@@ -106,7 +106,8 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "employees", id: :serial, force: :cascade do |t|
+
+  create_table "employees", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.string "title", null: false
@@ -116,7 +117,7 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "leads", force: :cascade do |t|
+  create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "fullNameContact", null: false
     t.string "compagnyName", null: false
     t.string "email", null: false
@@ -131,7 +132,7 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "quotes", id: :serial, force: :cascade do |t|
+  create_table "quotes", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "type_building", null: false
     t.integer "numApartment"
     t.integer "numFloor"
@@ -141,7 +142,7 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", id: :serial, force: :cascade do |t|
+  create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
