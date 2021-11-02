@@ -85,8 +85,8 @@ gem 'rails_admin', '~> 2.0'
 
 gem 'jquery-ui-rails'
 
-
-
 gem 'execjs'
 
 gem 'therubyracer', :platforms => :ruby
+
+gem 'faker'
