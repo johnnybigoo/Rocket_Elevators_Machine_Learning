@@ -3,7 +3,7 @@ class QuoteController < ApplicationController
     @quote = Quote.new(quote_params)
     if @quote.save
       redirect_to action: :new,
-      notice 'Quote created successfully'
+      notice("Quote created successfully")
     else
       render :new 
     end
