@@ -22,7 +22,7 @@
 
 							<!-- Checkbox -->
 							<div class="container align-items-center text-center form-check form-check-inline px-5">
-								<form class="type-answer col-sm-12 m-4">
+								<%= form_with url:quote_path, class:"type-answer col-sm-12 m-4", local:true, method: :post do %>
 									<label class="checkbox">
 										<input type="radio" name="btn-radio" id="res">
 										<i name="res"></i> Residential 
@@ -39,15 +39,15 @@
 										<input type="radio" name="btn-radio" id="hyb">
 										<i></i> Hybrid 
 									</label>
-
-								</form>
+								<% end %> 
 							</div>
 						</div>
 
 						<div id="border-rad-3" class="border bg-white p-5">
 							<div class="row-lg-4 p-3 mt-9">
 								<div class="col-md-12">
-									<form id="fields">
+									<%= form_with url:quote_path, id:"fields", local:true, method: :post do %>
+									
 										<div id="filled" class="row align-items-center">
 											<div class="form-group col-sm-4 py-2 mb-2" id="numApartments">
 												<label>Number of Apartments</label>
@@ -149,12 +149,13 @@
                         <div class="col-sm-6" id="reset">
                           <button type="button" class="btn btn-secondary">Clear</button>
                         </div>
-                        <div id="submit">
-                          <button type="button" class="btn btn-primary">Submit</button>
+                        <div>
+                          <%= submit_tag "Submit", id:"submit", class:"btn btn-primary" %>
                         </div>
                       </div>
 										</div>
-									</form>
+
+									<% end %>
 								</div><br><hr>
 							</div>
 
