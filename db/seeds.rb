@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "faker"
+
 
 User.create(id: 1,email: 'nicolas.genest@codeboxx.biz',password: 'password')
 User.create(id: 2,email: 'nadya.fortier@codeboxx.biz',password: 'password')
@@ -52,3 +54,79 @@ Employee.create(id: 18,first_name: 'Emmanuela',last_name: 'Derilus',title: 'Deve
 Employee.create(id: 19,first_name: 'Abdul',last_name: 'Akeeb',title: 'Developer',email: 'abdul.akeeb@codebozz.biz',user_id: 19)
 Employee.create(id: 20,first_name: 'Krista',last_name: 'Sheely',title: 'Developer',email: 'krista.sheely@codeboxx.biz',user_id: 20)
 Employee.create(id: 21,first_name: 'Jonathan',last_name: 'Murray',title: 'Developer',email: 'jonathan.murray@codeboxx.biz',user_id: 21)
+
+userId = 22
+100.times do
+    User.create([{
+        id: userId,
+        email: Faker::Internet.email,
+        password: 'password'
+    }])
+    userId+=1
+end
+userId = 22
+
+100.times do
+    Lead.create([{
+        fullNameContact: Faker::Name.name,
+        compagnyName: Faker::Company.name,
+        email: Faker::Internet.email,
+        phoneNumber: Faker::PhoneNumber.cell_phone,
+        nameProject: Faker::App.name,
+        descriptionProject: Faker::Lorem.paragraph,
+        department: Faker::Commerce.department,
+        message: Faker::Lorem.paragraph,
+        file: Faker::Number.binary,
+        date: Faker::Date.between(from: '2021-01-01', to: '2021-10-01')
+    }])
+end
+
+100.times do
+    Address.create([{
+        typeAddress: Faker::Address.community,
+        status: Faker::Lorem.word,
+        entity: Faker::Company.name,
+        numberAndStreet: Faker::Address.street_address,
+        suiteOrApartment: Faker::Address.building_number,
+        city: Faker::Address.city,
+        postalCode: Faker::Address.postcode,
+        country: Faker::Address.country,
+        notes: Faker::Lorem.paragraph
+    }])
+end
+
+addressId = 1
+100.times do
+    Customer.create([{
+        userId: userId,
+        dateCreation: Faker::Date.between(from: '2014-01-01', to: '2014-10-01'),
+        compagnyName: Faker::Company.name,
+        addressId: addressId,
+        fullName: Faker::Name.name,
+        contactPhone: Faker::PhoneNumber.cell_phone,
+        email: Faker::Internet.email,
+        description: Faker::Lorem.paragraph,
+        fullNameTechnicalAuthority: Faker::Name.name,
+        technicalAuthorityPhone: Faker::PhoneNumber.cell_phone,
+        technicalAuthorityEmail: Faker::Internet.email
+    }])
+    userId = userId + 1
+    addressId = addressId + 1
+end
+customerId = 1
+addressId = 1
+
+100.times do
+    Building.create([{
+        customerId: customerId,
+        addressId: addressId,
+        fullNameAdministrator: Faker::Name.name,
+        emailAdministrator: Faker::Internet.email,
+        phoneNumberAdministrator: Faker::PhoneNumber.cell_phone,
+        fullNameTechnicalContact: Faker::Name.name,
+        emailTechnicalContact: Faker::Internet.email,
+        phoneTechnicalContact: Faker::PhoneNumber.cell_phone
+    }])
+    customerId = customerId + 1
+    addressId = addressId + 1
+end
