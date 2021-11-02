@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.datetime "updated_at", null: false
   end
 
+
   create_table "batteries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "buildingId", null: false
     t.string "type", null: false
@@ -38,8 +39,6 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.string "notes", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["buildingId"], name: "fk_rails_a41b912b01"
-    t.index ["employeeId"], name: "fk_rails_b3952b46cb"
   end
 
   create_table "building_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -48,8 +47,8 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.string "value", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["buildingId"], name: "fk_rails_639c920861"
   end
+
 
   create_table "buildings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "customerId", null: false
@@ -62,8 +61,6 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.string "phoneTechnicalContact", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["addressId"], name: "fk_rails_1a4fe0cf30"
-    t.index ["customerId"], name: "fk_rails_e804dec3ca"
   end
 
   create_table "columns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -75,7 +72,6 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.string "notes", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["batteryId"], name: "fk_rails_5c0968a3ea"
   end
 
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -92,9 +88,8 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.string "technicalAuthorityEmail", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["addressId"], name: "fk_rails_71c8d57845"
-    t.index ["userId"], name: "fk_rails_835ae73a22"
   end
+
 
   create_table "elevators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "columnId", null: false
@@ -109,8 +104,8 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.string "notes", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["columnId"], name: "fk_rails_51711cce16"
   end
+
 
   create_table "employees", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "first_name", null: false
@@ -120,7 +115,6 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "fk_rails_dcfd3d4fc3"
   end
 
   create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
