@@ -11,6 +11,6 @@ class QuoteController < ApplicationController
 
   private
   def quote_params
-    params.require(:quote).permit()
+    params.require(:quote).permit(#todos os campos em forma de symbol)
   end
 end
