@@ -4,7 +4,7 @@ class CreateElevators < ActiveRecord::Migration[5.2]
       t.bigint :columnId, null: false
       t.string :serialNumber, null: false
       t.string :model, null: false
-      t.string :type, null: false
+      t.string :types, null: false
       t.string :status, null: false
       t.datetime :dateCommissioning, null: false
       t.datetime :dateLastInspection, null: false

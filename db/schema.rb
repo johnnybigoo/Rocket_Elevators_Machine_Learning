@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
 
   create_table "batteries", force: :cascade do |t|
     t.bigint "buildingId", null: false
-    t.string "type", null: false
+    t.string "types", null: false
     t.string "status", null: false
     t.integer "employeeId", null: false
     t.datetime "dateCommissioning", null: false
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
 
   create_table "columns", force: :cascade do |t|
     t.bigint "batteryId", null: false
-    t.string "type", null: false
+    t.string "types", null: false
     t.string "numberFloorServed", null: false
     t.string "status", null: false
     t.string "information", null: false
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.bigint "columnId", null: false
     t.string "serialNumber", null: false
     t.string "model", null: false
-    t.string "type", null: false
+    t.string "types", null: false
     t.string "status", null: false
     t.datetime "dateCommissioning", null: false
     t.datetime "dateLastInspection", null: false

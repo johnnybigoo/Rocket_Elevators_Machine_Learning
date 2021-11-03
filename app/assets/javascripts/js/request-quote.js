@@ -28,25 +28,31 @@ $(".type-answer").change(function () {
         commom();
         $("#numApartments").show();
         $("#numFloorsRes").show();
+        $("#numOccupants").show();
         $(".form-group-2").show();
+        $(".type-building").val("Residential");
         calcRes();
     }
     else if ($('#comm').prop('checked')) {
         commom();
         $("#numBusinesses").show();
         $("#numParking").show();
+        $("#numOccupants").show();
         $("#numCages").show();
         $("#numFloorsRes").show();
         $(".form-group-2").show();
+        $(".type-building").val("Commercial");
         calcCom();
     }
     else if ($('#corp').prop('checked')) {
         commom();
         $("#numCompanies").show();
         $("#numParking").show();
+        $("#numBusinesses").show();
         $("#numOccupants").show();
         $("#numFloorsHyb").show();
         $(".form-group-2").show();
+        $(".type-building").val("Corporate");
         calcCorpHybr();
     }
     else if ($('#hyb').prop('checked')) {
@@ -57,6 +63,7 @@ $(".type-answer").change(function () {
         $("#numHours").show();
         $("#numFloorsHyb").show();
         $(".form-group-2").show();
+        $(".type-building").val("Hybrid");
         calcCorpHybr();
     }
 });
@@ -144,6 +151,7 @@ var showResults = function () {
     $("#showColumns").text("Number of columns = " + numColumns);
     $("#showElevators").text("Number of shafts = " + numElevators);
     $("#qtdElevators").text("Number of Elevators needed = " + numElevators);
+    $(".num-elevator").val(numElevators); //essa parte set o input hidden para o numElevator
     if (radioValue === "1" || radioValue === "2" || radioValue === "3") {
         calcPrice();
     }
@@ -180,18 +188,9 @@ $('#reset').click(function () {
 //.Submit button
 $('#submit').on('click', function (event) {
     alert("Thank you!! Your form has been submitted.");
-    event.preventDefault();
-    var numApartments = $('#input_apartments').val();
-    var numCompanies = $('#input_acompanies').val();
-    var numBusinesses = $('#input_businesses').val();
-    var numFloorsHyb = $('#input_floorsHyb').val();
-    var numFloorsRes = $('#input_floorsRes').val();
-    var numOccupants = $('#input_occupants').val();
-    var numElevators = $(numElevators).val();
-    console.log(typeBuilding, numApartments, numCompanies, numBusinesses, numFloorsHyb, numFloorsRes, numOccupants, numElevators);
+    var typeBuilding = $(".type-answer").serialize();
+    var quote = $("#fields").serialize();
 
-    var typeBuilding = $("input:checkbox[name=radio-btn]:checked").each(function () {
-        console.log("Type of building: " + $(this).attr("id") + "Value: " + $(this).val());
-    });
+    console.log(typeBuilding, quote);
 });
 
