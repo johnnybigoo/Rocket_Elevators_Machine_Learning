@@ -24,19 +24,19 @@
 							<div class="container align-items-center text-center form-check form-check-inline px-5">
 								<%= form_with url:quote_path, class:"type-answer col-sm-12 m-4", local:true, method: :post do %>
 									<label class="checkbox">
-										<input type="radio" name="btn-radio" id="res">
+										<input type="radio" name="type-building" id="res" class="btn-radio" value="Residential">
 										<i name="res"></i> Residential 
 									</label>
 									<label class="checkbox">
-										<input type="radio" name="btn-radio" id="comm">
+										<input type="radio" name="type-building" id="comm" class="btn-radio" value="Commercial">
 										<i></i> Commercial
 									</label>
 									<label class="checkbox">
-										<input type="radio" name="btn-radio" id="corp">
+										<input type="radio" name="type-building" id="corp" class="btn-radio" value="Corporate">
 										<i></i> Corporate
 									</label>
 									<label class="checkbox">
-										<input type="radio" name="btn-radio" id="hyb">
+										<input type="radio" name="type-building" id="hyb" class="btn-radio" value="Hybrid">
 										<i></i> Hybrid 
 									</label>
 								<% end %> 
@@ -47,21 +47,25 @@
 							<div class="row-lg-4 p-3 mt-9">
 								<div class="col-md-12">
 									<%= form_with url:quote_path, id:"fields", local:true, method: :post do %>
-									
+										
 										<div id="filled" class="row align-items-center">
+											<input type="hidden" name="quote[numElevator]" class="num-elevator">
+											<input type="hidden" name="quote[type_building]" class="type-building">
+
+
 											<div class="form-group col-sm-4 py-2 mb-2" id="numApartments">
 												<label>Number of Apartments</label>
-												<input type="text" id="input_apartments" min="0" oninput="validity.valid||(value='');" class="form-control">
+												<input type="text" id="input_apartments" min="0" name="quote[numApartment]" oninput="validity.valid||(value='');" class="form-control">
 											</div>
 											
 											<div class="form-group col-sm-4 py-2 mb-2" id="numFloorsHyb">
 												<label>Number of Floors<span class="grey text-red"><small> (Excluding Basements)</small></span></label>
-												<input type="text" id="input_floorsHyb" min="0" oninput="validity.valid||(value='');" class="form-control">
+												<input type="text" id="input_floorsHyb" min="0" name="quote[numFloorHyb]" oninput="validity.valid||(value='');" class="form-control">
 											</div>
 
 											<div class="form-group col-sm-4 py-2 mb-2" id="numFloorsRes">
 												<label>Number of Floors</label>
-												<input type="text" id="input_floorsRes" min="0" oninput="validity.valid||(value='');" class="form-control">
+												<input type="text" id="input_floorsRes" min="0" name="quote[numFloor]" oninput="validity.valid||(value='');" class="form-control">
 											</div>
 											
 											<div class="form-group col-sm-4 py-2 mb-2" id="numBasements">
@@ -71,7 +75,7 @@
 
 											<div class="form-group col-sm-4 py-2 mb-2" id="numBusinesses">
 												<label>Number of Distinct Businesses</label>
-												<input type="text" id="input_businesses" min="0" oninput="validity.valid||(value='');" class="form-control">
+												<input type="text" id="input_businesses" min="0" name="quote[numBusinessRooms]" oninput="validity.valid||(value='');" class="form-control">
 											</div>
 
 											<div class="form-group col-sm-4 py-2 mb-2" id="numParking">
@@ -86,12 +90,12 @@
 
 											<div class="form-group col-sm-4 py-2 mb-2" id="numCompanies">
 												<label>Number of Separate Tennant Companies</label>
-												<input type="text" id="input_acompanies" min="0" oninput="validity.valid||(value='');" class="form-control">
+												<input type="text" id="input_acompanies" min="0" name="quote[numOccupant]" oninput="validity.valid||(value='');" class="form-control">
 											</div>
 
 											<div class="form-group col-sm-4 py-2 mb-2" id="numOccupants">
 												<label>Number of Occupants Per Floor</label>
-												<input type="text" id="input_occupants" min="0" oninput="validity.valid||(value='');" class="form-control">
+												<input type="text" id="input_occupants" min="0" name="quote[numOccupant]" oninput="validity.valid||(value='');" class="form-control">
 											</div>
 
 											<div class="form-group col-sm-4 py-2 mb-2" id="numHours">
