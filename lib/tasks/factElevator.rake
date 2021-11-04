@@ -1,5 +1,6 @@
 namespace :db do
     desc "a new task to be executed"
+    # not finished
     task :fact_quote do
         ActiveRecord::Base.establish_connection(:adapter  => "mysql2",:host => "localhost",:username => "root",:password => "Allo1392!",:database => "Rocket_Elevators_Information_System_development")
         row = ActiveRecord::Base.connection.execute('SELECT e.serialNumber AS Serial_Number, e.dateCommissioning AS Date_Commissioning,b.id AS BuildingID,b.customerId AS CustomerID, a.city AS City 
@@ -14,6 +15,8 @@ namespace :db do
             ActiveRecord::Base.connection.execute(query)
         end
     end
+
+    # not finished
     task :fact_contact do
         ActiveRecord::Base.establish_connection(:adapter  => "mysql2",:host => "localhost",:username => "root",:password => "Allo1392!",:database => "Rocket_Elevators_Information_System_development")
         row = ActiveRecord::Base.connection.execute('SELECT l.id , l.`date`,l.compagnyName,l.email,l.nameProject
@@ -24,6 +27,7 @@ namespace :db do
             ActiveRecord::Base.connection.execute(query)
         end
     end
+
     task :fact_elevator do
         ActiveRecord::Base.establish_connection(:adapter  => "mysql2",:host => "localhost",:username => "root",:password => "Allo1392!",:database => "Rocket_Elevators_Information_System_development")
         row = ActiveRecord::Base.connection.execute('SELECT e.serialNumber AS Serial_Number, e.dateCommissioning AS Date_Commissioning,b.id AS BuildingID,b.customerId AS CustomerID, a.city AS City 
@@ -38,6 +42,7 @@ namespace :db do
             ActiveRecord::Base.connection.execute(query)
         end
     end
+    # not finished
     task :dim_customer do
         ActiveRecord::Base.establish_connection(:adapter  => "mysql2",:host => "localhost",:username => "root",:password => "Allo1392!",:database => "Rocket_Elevators_Information_System_development")
         row = ActiveRecord::Base.connection.execute('SELECT e.serialNumber AS Serial_Number, e.dateCommissioning AS Date_Commissioning,b.id AS BuildingID,b.customerId AS CustomerID, a.city AS City 
