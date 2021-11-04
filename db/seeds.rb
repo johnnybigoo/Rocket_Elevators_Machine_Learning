@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require "faker"
+require "json"
 
 User.create(id: 1,email: 'nicolas.genest@codeboxx.biz',password: 'password')
 User.create(id: 2,email: 'nadya.fortier@codeboxx.biz',password: 'password')
@@ -113,18 +114,35 @@ end
     }])
 end
 
+#file = File.join Rails.root, 'db', File.read('./addresses-us-1000.json')
+#data_hash = JSON.parse(file)
+#data_hash_size = data_hash['city'].size
+data_hash = ''
+file = File.join Rails.root, 'db', 'migrate', 'addresses-us-1000.json'
+File.open(file, 'r') do |f|
+    data_hash = JSON.parse(f.read)
+    #data_hash_size = data_hash['city'].size
+end
+
+address_id = 0
+
 100.times do
     Address.create([{
         typeAddress: Faker::Address.community,
         status: Faker::Lorem.word,
         entity: Faker::Company.name,
-        numberAndStreet: Faker::Address.street_address,
+        #numberAndStreet: Faker::Address.street_address,
+        numberAndStreet: data_hash['addresses'][address_id]['address1'],
         suiteOrApartment: Faker::Address.building_number,
-        city: Faker::Address.city,
-        postalCode: Faker::Address.postcode,
-        country: Faker::Address.country,
+        #city: Faker::Address.city,
+        city: data_hash['addresses'][address_id]['city'],
+        #postalCode: Faker::Address.postcode,
+        postalCode: data_hash['addresses'][address_id]['postalCode'],
+        #country: Faker::Address.country,
+        country: data_hash['addresses'][address_id]['state'],
         notes: Faker::Lorem.paragraph
     }])
+    address_id = address_id + 1
 end 
 
 addressId = 1
