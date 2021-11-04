@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get 'pages/quote'
   get '/quote/new', to: 'quote#new'
   post '/quote', to: 'quote#create'
+  post '/contact', to: 'contact#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

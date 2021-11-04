@@ -13,6 +13,6 @@ class QuoteController < ApplicationController
 
   private
   def quote_params
-    params.require(:quote).permit(:type_building, :numApartment, :numFloor, :numElevator, :numOccupant) 
+    params.require(:quote).permit(:type_building, :numApartment, :numFloor, :numElevator, :numOccupant, :compagnyName, :email) 
   end
 end

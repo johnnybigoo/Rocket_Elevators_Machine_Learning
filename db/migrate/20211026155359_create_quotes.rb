@@ -7,6 +7,8 @@ class CreateQuotes < ActiveRecord::Migration[5.2]
       t.integer :numFloor
       t.integer :numElevator
       t.integer :numOccupant
+      t.string :compagnyName
+      t.string :email
 
       t.timestamps
     end
