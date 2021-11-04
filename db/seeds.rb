@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require "faker"
-
+require "json"
 
 User.create(id: 1,email: 'nicolas.genest@codeboxx.biz',password: 'password')
 User.create(id: 2,email: 'nadya.fortier@codeboxx.biz',password: 'password')
@@ -30,9 +30,6 @@ User.create(id: 19,email: 'abdul.akeeb@codebozz.biz',password: 'password')
 User.create(id: 20,email: 'krista.sheely@codeboxx.biz',password: 'password')
 User.create(id: 21,email: 'jonathan.murray@codeboxx.biz',password: 'password')
 
-Quote.create(id: 1, type_building: "allo")
-Quote.create(id: 2, type_building: "allo")
-
 Employee.create(id: 1,first_name: 'Nicolas',last_name: 'Genest',title: 'CEO',email: 'nicolas.genest@codeboxx.biz',user_id: 1)
 Employee.create(id: 2,first_name: 'Nadya',last_name: 'Fortier',title: 'Director',email: 'nadya.fortier@codeboxx.biz',user_id: 2)
 Employee.create(id: 3,first_name: 'Martin',last_name: 'Chantal',title: 'Assistant Director ',email: 'martin.chantal@codeboxx.biz',user_id: 3)
@@ -55,8 +52,14 @@ Employee.create(id: 19,first_name: 'Abdul',last_name: 'Akeeb',title: 'Developer'
 Employee.create(id: 20,first_name: 'Krista',last_name: 'Sheely',title: 'Developer',email: 'krista.sheely@codeboxx.biz',user_id: 20)
 Employee.create(id: 21,first_name: 'Jonathan',last_name: 'Murray',title: 'Developer',email: 'jonathan.murray@codeboxx.biz',user_id: 21)
 
+typeA = ['residential', 'commercial', 'corporate', 'hybrid'] ;
+typeB = ['residential', 'commercial', 'corporate'] ;
+modelA = ['standard', 'premium', 'excelium'] ;
+statusA = ['online','down','up','offline','maintenance','busy','crowded','empty'] ;
+informationA =['type', 'construction_year', 'elevator_shaft_amount','amount_of_floor','building_status' , 'model','status','number_of_occupants' ] ;
+
 userId = 22
-100.times do
+179.times do
     User.create([{
         id: userId,
         email: Faker::Internet.email,
@@ -64,7 +67,37 @@ userId = 22
     }])
     userId+=1
 end
-userId = 22
+id = 22
+
+# idCounter = 1
+# 100.times do
+#     if Employee.where(id: idCounter).nil?
+#         Employee.create([{
+#             id:idCounter,
+#             first_name:Faker::Name.first_name ,
+#             last_name:Faker::Name.last_name,
+#             title:Faker::Job.position,
+#             email:Faker::Internet.email,
+#             user_id:user_id
+#         }])
+#     end
+#     idCounter = idCounter + 1
+# end
+
+user_id = 22
+79.times do
+    Employee.create([{
+    
+        id:id,
+        first_name:Faker::Name.first_name ,
+        last_name:Faker::Name.last_name,
+        title:Faker::Job.position,
+        email:Faker::Internet.email,
+        user_id:user_id
+    }])
+    id = id + 1
+    user_id = user_id + 1
+end
 
 100.times do
     Lead.create([{
@@ -81,25 +114,43 @@ userId = 22
     }])
 end
 
+#file = File.join Rails.root, 'db', File.read('./addresses-us-1000.json')
+#data_hash = JSON.parse(file)
+#data_hash_size = data_hash['city'].size
+data_hash = ''
+file = File.join Rails.root, 'db', 'migrate', 'addresses-us-1000.json'
+File.open(file, 'r') do |f|
+    data_hash = JSON.parse(f.read)
+    #data_hash_size = data_hash['city'].size
+end
+
+address_id = 0
+
 100.times do
     Address.create([{
         typeAddress: Faker::Address.community,
         status: Faker::Lorem.word,
         entity: Faker::Company.name,
-        numberAndStreet: Faker::Address.street_address,
+        #numberAndStreet: Faker::Address.street_address,
+        numberAndStreet: data_hash['addresses'][address_id]['address1'],
         suiteOrApartment: Faker::Address.building_number,
-        city: Faker::Address.city,
-        postalCode: Faker::Address.postcode,
-        country: Faker::Address.country,
+        #city: Faker::Address.city,
+        city: data_hash['addresses'][address_id]['city'],
+        #postalCode: Faker::Address.postcode,
+        postalCode: data_hash['addresses'][address_id]['postalCode'],
+        #country: Faker::Address.country,
+        country: data_hash['addresses'][address_id]['state'],
         notes: Faker::Lorem.paragraph
     }])
-end
+    address_id = address_id + 1
+end 
 
 addressId = 1
+user_id = 101
 100.times do
     Customer.create([{
-        userId: userId,
-        dateCreation: Faker::Date.between(from: '2014-01-01', to: '2014-10-01'),
+        userId: user_id,
+        dateCreation: Faker::Date.between(from: '2019-01-01', to: '2021-10-01'),
         compagnyName: Faker::Company.name,
         addressId: addressId,
         fullName: Faker::Name.name,
@@ -110,11 +161,12 @@ addressId = 1
         technicalAuthorityPhone: Faker::PhoneNumber.cell_phone,
         technicalAuthorityEmail: Faker::Internet.email
     }])
-    userId = userId + 1
+    user_id = user_id + 1
     addressId = addressId + 1
-end
+end 
+
 customerId = 1
-addressId = 1
+addressId = 1 
 
 100.times do
     Building.create([{
@@ -130,3 +182,77 @@ addressId = 1
     customerId = customerId + 1
     addressId = addressId + 1
 end
+
+
+buildingId = 1
+100.times do
+    BuildingDetail.create([{
+        buildingId:buildingId,
+        informationKey:informationA.sample(random: Random.new(3)) , 
+        value:[Faker::Number.between(from: 1950, to: 2021),typeA.sample(random: Random.new(1)),statusA.sample(random: Random.new(1))]
+
+
+    }])
+
+    buildingId = buildingId + 1
+end
+
+building_Id = 1
+employeeId = 1
+100.times do
+    Batterie.create([{
+        buildingId:building_Id,
+        types:typeA.sample(random: Random.new(1)),
+        status:statusA.sample(random: Random.new(1)),
+        employeeId:employeeId,
+        dateCommissioning:Faker::Date.between(from: '2018-01-01', to: '2021-11-10'),
+        dateLastInspection:Faker::Date.between(from: '2020-01-01', to: '2021-11-10'),
+        certificateOperations:Faker::IDNumber.valid ,
+        information:Faker::Lorem.sentence(word_count: 3),
+        notes:Faker::Lorem.paragraph(sentence_count: 2)
+
+    }])
+    building_Id = building_Id + 1
+    employeeId += 1
+end
+
+batteryId = 1
+compteur = 0
+200.times do
+    Column.create([{
+        batteryId:batteryId,
+        types:typeB.sample(random: Random.new(1)),
+        numberFloorServed:Faker::Number.number(digits: 2),
+        status: statusA.sample(random: Random.new(1)),
+        information:Faker::Lorem.sentence(word_count: 3),
+        notes:Faker::Lorem.paragraph(sentence_count: 2)
+    }])
+    compteur = compteur + 1
+    if compteur == 2
+        batteryId = batteryId + 1
+        compteur = 0
+    end
+    
+
+end
+columnId = 1
+compteur = 0
+400.times do
+    Elevator.create([{
+        columnId:columnId ,
+        serialNumber: Faker::Barcode.upc_a,
+        model:modelA.sample(random: Random.new(1)),
+        types:typeB.sample(random: Random.new(1)),
+        status: statusA.sample(random: Random.new(1)),
+        dateCommissioning:Faker::Date.between(from: '2018-01-01', to: '2021-11-10'),
+        dateLastInspection:Faker::Date.between(from: '2020-01-01', to: '2021-11-10'),
+        certificateOperations:Faker::IDNumber.valid ,
+        information:Faker::Lorem.sentence(word_count: 3),
+        notes:Faker::Lorem.paragraph(sentence_count: 2)
+    }])
+    compteur = compteur + 1
+    if compteur == 2
+        columnId = columnId + 1
+        compteur = 0
+    end
+end 

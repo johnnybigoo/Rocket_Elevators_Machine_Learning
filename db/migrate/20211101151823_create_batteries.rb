@@ -2,7 +2,7 @@ class CreateBatteries < ActiveRecord::Migration[5.2]
   def change
     create_table :batteries do |t|
       t.bigint :buildingId, null: false
-      t.string :type, null: false
+      t.string :types, null: false
       t.string :status, null: false
       t.integer :employeeId, null: false
       t.datetime :dateCommissioning, null: false
