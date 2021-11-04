@@ -144,6 +144,8 @@ ActiveRecord::Schema.define(version: 2021_11_01_161503) do
     t.integer "numFloor"
     t.integer "numElevator"
     t.integer "numOccupant"
+    t.string "compagnyName"
+    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
