@@ -57,6 +57,53 @@ modelA = ['standard', 'premium', 'excelium'] ;
 statusA = ['online','down','up','offline','maintenance','busy','crowded','empty'] ;
 informationA =['type', 'construction_year', 'elevator_shaft_amount','amount_of_floor','building_status' , 'model','status','number_of_occupants' ] ;
 
+id = 1
+100.times do
+    random = typeA.sample
+    if random == 'residential' then
+        Quote.create([{
+        id: id,
+        type_building: 'residential',
+        numApartment: Faker::Number.between(from: 10, to: 500),
+        numFloor: Faker::Number.between(from: 1, to: 80),
+        compagnyName: Faker::Company.name,
+        email: Faker::Internet.email
+        }])
+    
+    elsif random == 'commercial' then
+        Quote.create([{
+        id: id,
+        type_building: 'commercial',
+        numElevator: Faker::Number.between(from: 10, to: 40),
+        compagnyName: Faker::Company.name,
+        email: Faker::Internet.email
+        }])
+        
+    elsif random == 'corporate' then
+        Quote.create([{
+        id: id,
+        type_building: 'corporate',
+        numApartment: Faker::Number.between(from: 10, to: 500),
+        numFloor: Faker::Number.between(from: 1, to: 80),
+        numOccupant: Faker::Number.between(from: 1, to: 80),
+        compagnyName: Faker::Company.name,
+        email: Faker::Internet.email
+        }])
+
+    elsif random == 'hybrid' then
+        Quote.create([{
+        id: id,
+        type_building: 'hybrid',
+        numApartment: Faker::Number.between(from: 10, to: 500),
+        numFloor: Faker::Number.between(from: 1, to: 80),
+        numOccupant: Faker::Number.between(from: 1, to: 80),
+        compagnyName: Faker::Company.name,
+        email: Faker::Internet.email
+        }])
+    end
+    id = id + 1
+end
+
 userId = 22
 179.times do
     User.create([{
@@ -170,8 +217,8 @@ buildingId = 1
 100.times do
     BuildingDetail.create([{
         buildingId:buildingId,
-        informationKey:informationA.sample(random: Random.new(3)) , 
-        value:[Faker::Number.between(from: 1950, to: 2021),typeA.sample(random: Random.new(1)),statusA.sample(random: Random.new(1))]
+        informationKey:informationA.sample, 
+        value:[Faker::Number.between(from: 1950, to: 2021),typeA.sample,statusA.sample]
 
 
     }])
@@ -184,8 +231,8 @@ employeeId = 1
 100.times do
     Batterie.create([{
         buildingId:building_Id,
-        types:typeA.sample(random: Random.new(1)),
-        status:statusA.sample(random: Random.new(1)),
+        types:typeA.sample,
+        status:statusA.sample,
         employeeId:employeeId,
         dateCommissioning:Faker::Date.between(from: '2018-01-01', to: '2021-11-10'),
         dateLastInspection:Faker::Date.between(from: '2020-01-01', to: '2021-11-10'),
@@ -203,9 +250,9 @@ compteur = 0
 200.times do
     Column.create([{
         batteryId:batteryId,
-        types:typeB.sample(random: Random.new(1)),
+        types:typeB.sample,
         numberFloorServed:Faker::Number.number(digits: 2),
-        status: statusA.sample(random: Random.new(1)),
+        status: statusA.sample,
         information:Faker::Lorem.sentence(word_count: 3),
         notes:Faker::Lorem.paragraph(sentence_count: 2)
     }])
@@ -223,9 +270,9 @@ compteur = 0
     Elevator.create([{
         columnId:columnId ,
         serialNumber: Faker::Barcode.upc_a,
-        model:modelA.sample(random: Random.new(1)),
-        types:typeB.sample(random: Random.new(1)),
-        status: statusA.sample(random: Random.new(1)),
+        model:modelA.sample,
+        types:typeB.sample,
+        status: statusA.sample,
         dateCommissioning:Faker::Date.between(from: '2018-01-01', to: '2021-11-10'),
         dateLastInspection:Faker::Date.between(from: '2020-01-01', to: '2021-11-10'),
         certificateOperations:Faker::IDNumber.valid ,

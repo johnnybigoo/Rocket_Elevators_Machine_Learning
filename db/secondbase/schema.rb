@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2021_11_03_122154) do
     t.bigint "contactId", null: false
     t.datetime "creation_date", null: false
     t.string "compagnyName", null: false
-    t.bigint "customerId", null: false
+    t.string "email", null: false
     t.string "nameProject", null: false
   end
 

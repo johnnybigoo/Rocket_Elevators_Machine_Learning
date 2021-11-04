@@ -4,7 +4,7 @@ class CreateFactContact < ActiveRecord::Migration[5.2]
       t.bigint :contactId, null: false
       t.datetime :creation_date, null: false
       t.string :compagnyName, null: false
-      t.bigint :customerId, null: false
+      t.string :email, null: false
       t.string :nameProject, null: false
     end
   end
