@@ -67,6 +67,7 @@ id = 1
         type_building: 'residential',
         numApartment: Faker::Number.between(from: 10, to: 500),
         numFloor: Faker::Number.between(from: 1, to: 80),
+        numElevator: Faker::Number.between(from: 1, to: 30),
         compagnyName: Faker::Company.name,
         email: Faker::Internet.email
         }])
@@ -87,6 +88,7 @@ id = 1
         numApartment: Faker::Number.between(from: 10, to: 500),
         numFloor: Faker::Number.between(from: 1, to: 80),
         numOccupant: Faker::Number.between(from: 1, to: 80),
+        numElevator: Faker::Number.between(from: 1, to: 30),
         compagnyName: Faker::Company.name,
         email: Faker::Internet.email
         }])
@@ -98,6 +100,7 @@ id = 1
         numApartment: Faker::Number.between(from: 10, to: 500),
         numFloor: Faker::Number.between(from: 1, to: 80),
         numOccupant: Faker::Number.between(from: 1, to: 80),
+        numElevator: Faker::Number.between(from: 1, to: 30),
         compagnyName: Faker::Company.name,
         email: Faker::Internet.email
         }])
