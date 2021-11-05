@@ -10,4 +10,9 @@ class PagesController < ApplicationController
 
   def quote
   end
+
+  def charts
+    @data = FactElevator.totals_by_year_month
+    puts @data
+  end
 end
