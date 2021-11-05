@@ -45,6 +45,10 @@ Clone or download the .zip for this project.
 
 Here are the commands that will have to be entered in your terminal to start the server:
 - mySQL server start
+- ruby -v (To check if a corresponding version need to be installed)
+- rails -v (To check if a corresponding version need to be installed)
+- bundle install (To install all the necessary Gems)
+- Check in the directory for config/database.yml and if necessary replace the database password by yours.
 - rails db:create
 - rails s
 
