@@ -27,5 +27,7 @@
 //= require bootstrap
 //= require jquery_ujs
 //= require owl.carousel
+//= require Chart.bundle
+//= require chartkick
 //= require_tree .
 
