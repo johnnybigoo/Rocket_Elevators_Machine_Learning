@@ -310,3 +310,5 @@ compteur = 0
         compteur = 0
     end
 end 
+
+Rake::Task['db:main'].invoke
