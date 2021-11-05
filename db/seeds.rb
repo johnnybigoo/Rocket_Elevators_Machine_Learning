@@ -52,11 +52,11 @@ Employee.create(id: 19,first_name: 'Abdul',last_name: 'Akeeb',title: 'Developer'
 Employee.create(id: 20,first_name: 'Krista',last_name: 'Sheely',title: 'Developer',email: 'krista.sheely@codeboxx.biz',user_id: 20)
 Employee.create(id: 21,first_name: 'Jonathan',last_name: 'Murray',title: 'Developer',email: 'jonathan.murray@codeboxx.biz',user_id: 21)
 
-typeA = ['residential', 'commercial', 'corporate', 'hybrid'] ;
-typeB = ['residential', 'commercial', 'corporate'] ;
-modelA = ['standard', 'premium', 'excelium'] ;
-statusA = ['online','down','up','offline','maintenance','busy','crowded','empty'] ;
-informationA =['type', 'construction_year', 'elevator_shaft_amount','amount_of_floor','building_status' , 'model','status','number_of_occupants' ] ;
+typeA = ['residential', 'commercial', 'corporate', 'hybrid']
+typeB = ['residential', 'commercial', 'corporate']
+modelA = ['standard', 'premium', 'excelium']
+statusA = ['online','down','up','offline','maintenance','busy','crowded','empty']
+informationA =['type', 'construction_year', 'elevator_shaft_amount','amount_of_floor','building_status' , 'model','status','number_of_occupants' ]
 
 id = 1
 100.times do
@@ -69,7 +69,8 @@ id = 1
         numFloor: Faker::Number.between(from: 1, to: 80),
         numElevator: Faker::Number.between(from: 1, to: 30),
         compagnyName: Faker::Company.name,
-        email: Faker::Internet.email
+        email: Faker::Internet.email,
+        created_at: Faker::Date.between(from: '2018-01-01', to: '2021-10-01')
         }])
     
     elsif random == 'commercial' then
@@ -78,7 +79,8 @@ id = 1
         type_building: 'commercial',
         numElevator: Faker::Number.between(from: 10, to: 40),
         compagnyName: Faker::Company.name,
-        email: Faker::Internet.email
+        email: Faker::Internet.email,
+        created_at: Faker::Date.between(from: '2018-01-01', to: '2021-10-01')
         }])
         
     elsif random == 'corporate' then
@@ -90,7 +92,8 @@ id = 1
         numOccupant: Faker::Number.between(from: 1, to: 80),
         numElevator: Faker::Number.between(from: 1, to: 30),
         compagnyName: Faker::Company.name,
-        email: Faker::Internet.email
+        email: Faker::Internet.email,
+        created_at: Faker::Date.between(from: '2018-01-01', to: '2021-10-01')
         }])
 
     elsif random == 'hybrid' then
@@ -102,7 +105,8 @@ id = 1
         numOccupant: Faker::Number.between(from: 1, to: 80),
         numElevator: Faker::Number.between(from: 1, to: 30),
         compagnyName: Faker::Company.name,
-        email: Faker::Internet.email
+        email: Faker::Internet.email,
+        created_at: Faker::Date.between(from: '2018-01-01', to: '2021-10-01')
         }])
     end
     id = id + 1
@@ -160,7 +164,7 @@ end
         department: Faker::Commerce.department,
         message: Faker::Lorem.paragraph,
         file: Faker::Number.binary,
-        date: Faker::Date.between(from: '2021-01-01', to: '2021-10-01')
+        date: Faker::Date.between(from: '2018-01-01', to: '2021-10-01')
     }])
 end
 
@@ -200,7 +204,7 @@ user_id = 101
 100.times do
     Customer.create([{
         userId: user_id,
-        dateCreation: Faker::Date.between(from: '2019-01-01', to: '2021-10-01'),
+        dateCreation: Faker::Date.between(from: '2018-01-01', to: '2021-10-01'),
         compagnyName: Faker::Company.name,
         addressId: addressId,
         fullName: Faker::Name.name,
@@ -256,7 +260,7 @@ employeeId = 1
         status:statusA.sample,
         employeeId:employeeId,
         dateCommissioning:Faker::Date.between(from: '2018-01-01', to: '2021-11-10'),
-        dateLastInspection:Faker::Date.between(from: '2020-01-01', to: '2021-11-10'),
+        dateLastInspection:Faker::Date.between(from: '2021-01-01', to: '2021-11-10'),
         certificateOperations:Faker::IDNumber.valid ,
         information:Faker::Lorem.sentence(word_count: 3),
         notes:Faker::Lorem.paragraph(sentence_count: 2)
@@ -306,3 +310,5 @@ compteur = 0
         compteur = 0
     end
 end 
+
+Rake::Task['db:main'].invoke
