@@ -9,10 +9,10 @@ namespace :question do
     
     task :q1 do
         ActiveRecord::Base.establish_connection(:adapter  => "postgresql",:host => "localhost",:username => "postgres",:password => "allo1392",:database => "data_warehouse")
-        row = ActiveRecord::Base.connection.execute('select EXTRACT(year from fc.creation_date) as year ,EXTRACT(month from fc.creation_date) as month, COUNT(fc."compagnyName") as Number_of_Contacts
+        row = ActiveRecord::Base.connection.execute('select distinct EXTRACT(month from fc.creation_date) as month, COUNT(fc."compagnyName") as Number_of_Contacts
                                                     from fact_contacts fc
-                                                    group by EXTRACT(year from fc.creation_date),EXTRACT(month from fc.creation_date)
-                                                    order by EXTRACT(year from fc.creation_date),EXTRACT(month from fc.creation_date)')
+                                                    group by EXTRACT(month from fc.creation_date)
+                                                    order by EXTRACT(month from fc.creation_date)')
         row.each do |val|
             puts val
         end
@@ -20,10 +20,10 @@ namespace :question do
 
     task :q2 do
         ActiveRecord::Base.establish_connection(:adapter  => "postgresql",:host => "localhost",:username => "postgres",:password => "allo1392",:database => "data_warehouse")
-        row = ActiveRecord::Base.connection.execute('select EXTRACT(year from fq.creation_date) as year ,EXTRACT(month from fq.creation_date) as month, COUNT(fq."compagnyName")
+        row = ActiveRecord::Base.connection.execute('select distinct EXTRACT(month from fq.creation_date) as month, COUNT(fq."compagnyName")
                                                     from fact_quotes fq 
-                                                    group by EXTRACT(year from fq.creation_date),EXTRACT(month from fq.creation_date)
-                                                    order by EXTRACT(year from fq.creation_date),EXTRACT(month from fq.creation_date);
+                                                    group by EXTRACT(month from fq.creation_date)
+                                                    order by EXTRACT(month from fq.creation_date);
                                                     ')
         row.each do |val|
             puts val

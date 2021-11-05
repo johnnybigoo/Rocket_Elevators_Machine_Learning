@@ -1,21 +1,12 @@
-<div id="chart" style="width: auto; height: 600px;"></div>
+<h1 style="text-align: center;">Contact</h1>
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-  google.charts.load('current', {'packages':['bar']});
-  google.charts.setOnLoadCallback(drawChart);
+<%= column_chart @data_contact %>
 
-  function drawChart() {
-    var data = JSON.parse('<%= @data.to_json.html_safe -%>');
-    data = google.visualization.arrayToDataTable(data);
-    alert(data);
-    var options = {
-      chart: {
-        title: 'Number of elevators per contact',
-      }
-    };
+<h1 style="text-align: center;">Quote</h1>
 
-    var chart = new google.charts.Bar(document.getElementById('chart'));
-    chart.draw(data, google.charts.Bar.convertOptions(options));
-  }
-</script>
+<%= column_chart @data_quote %>
+
+<h1 style="text-align: center;">Customer</h1>
+
+<%= column_chart @data_customer %>
+
