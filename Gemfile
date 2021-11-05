@@ -93,3 +93,7 @@ gem 'faker'
 gem 'pg'
 
 gem 'secondbase'
+
+gem 'chartkick'
+
+gem 'groupdate'
