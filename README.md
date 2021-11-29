@@ -5,11 +5,11 @@
     <img src="https://rocketlift.ca/assets/_rocket/R2-3c6296bf2343b849b947f8ccfce0de61dd34ba7f9e2a23a53d0a743bc4604e3c.png" alt="Logo" width="500" height="200">
   </a>
 
-  <h3 align="center">Rocket Elevators Information System
+  <h3 align="center">Rocket Elevators Foundation
 </h3>
   
   <p align="center">
-    Odyssey Program - Weeks 4 & 5
+    Odyssey Program - Week 9 
   </p>
 </p>
 
@@ -18,7 +18,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Rocket Elevators Information System is the 4th and 5th project for the Odyssey 14 weeks program in CodeBoxx. 
+Rocket Elevators Foundation is the 9th week project for the Odyssey 14 weeks program in CodeBoxx. 
 
 By the 4th week We have created a CRUD website using a using Ruby on Rails with the website created in the Genesis Program. 
 
@@ -35,7 +35,7 @@ the Admin was able to analyse those data.
 
 ## Website deployed
 
-* ### [rocketlift.ca/](https://rocketlift.ca/)
+* ### [rocketelevators-jt.com/](https://rocketelevators-jt.com//)
 
 <br>
 
@@ -91,17 +91,14 @@ To access the database, use Dbeaver or MySQLWorkbench, which shows a history of 
 <br>
 
 <!-- TEAM MWMBERS -->
-## TEAM Project-RoR ~> Members:
+## TEAM Project-RoR ~> Member:
 
 - **[Jones Tavares](https://github.com/johnnybigoo)**
-- **[Alex Wallot](https://github.com/AlexWallot)**
-- **[Alexandre Gagné](https://github.com/Namial)**
-- **[Carl-Gregor](https://github.com/Dreaith)**
-- **[Khashayar Hedayati](https://github.com/khedayati)**
+
 
 
 
 <br>
 
 ##
-Project Link: [https://github.com/AlexWallot/Rocket_Elevators_Information_System](https://github.com/AlexWallot/Rocket_Elevators_Information_System)
+<!-- Project Link: [https://github.com/AlexWallot/Rocket_Elevators_Information_System](https://github.com/AlexWallot/Rocket_Elevators_Information_System) -->
