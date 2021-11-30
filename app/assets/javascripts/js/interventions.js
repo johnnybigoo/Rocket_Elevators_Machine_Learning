@@ -22,8 +22,90 @@ $("#intervention_customer_id").change(function (e) {
     error: (XMLHttpRequest, errorTextStatus, error) => {
       alert("Failed to submit:" + errorTextStatus + error);
     },
+
     success: (data) => {
       console.log(data)
+
+      $(data).each(function () {
+        var current_building = this;
+        $("#intervention_building_id").append($('<option>').text(current_building.fullNameAdministrator).val(current_building.id));
+      });
+    }
+  });
+
+})
+
+$("#intervention_building_id").change(function (e) {
+  console.log(this.value)
+  $("#intervention_battery_id").show()
+  var value = this.value
+
+  $.ajax({
+    dataType: "json",
+    cache: false,
+    url: "/get_batteries/" + value,
+    timeout: 5000,
+    error: (XMLHttpRequest, errorTextStatus, error) => {
+      alert("Failed to submit:" + errorTextStatus + error);
+    },
+
+    success: (data) => {
+      console.log(data)
+
+      $(data).each(function () {
+        var current_battery = this;
+        $("#intervention_battery_id").append($('<option>').text(current_battery.buildingId).val(current_battery.id));
+      });
+    }
+  });
+})
+
+$("#intervention_battery_id").change(function (e) {
+  console.log(this.value)
+  $("#intervention_column_id").show()
+  var value = this.value
+
+  $.ajax({
+    dataType: "json",
+    cache: false,
+    url: "/get_columns/" + value,
+    timeout: 5000,
+    error: (XMLHttpRequest, errorTextStatus, error) => {
+      alert("Failed to submit:" + errorTextStatus + error);
+    },
+
+    success: (data) => {
+      console.log(data)
+
+      $(data).each(function () {
+        var current_column = this;
+        $("#intervention_column_id").append($('<option>').text(current_column.batteryId).val(current_column.id));
+      });
+    }
+  });
+})
+
+$("#intervention_column_id").change(function (e) {
+  console.log(this.value)
+  $("#intervention_elevator_id").show()
+  var value = this.value
+
+  $.ajax({
+    dataType: "json",
+    cache: false,
+    url: "/get_elevators/" + value,
+    timeout: 5000,
+    error: (XMLHttpRequest, errorTextStatus, error) => {
+      alert("Failed to submit:" + errorTextStatus + error);
+    },
+
+    success: (data) => {
+      console.log(data)
+
+      $(data).each(function () {
+        var current_elevator = this;
+        $("#intervention_elevator_id").append($('<option>').text(current_elevator.columnId).val(current_elevator.id));
+      });
     }
   });
 })
