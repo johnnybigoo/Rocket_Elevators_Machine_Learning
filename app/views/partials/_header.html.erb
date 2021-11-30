@@ -66,6 +66,12 @@
                                     %>
 
                                 </li>
+                                <li><!-- INTERVENTIONS -->
+                                    <%= link_to "INTERVENTION", 
+                                    new_intervention_path 
+                                    %>
+
+                                </li>
                                 <% if user_signed_in? %>
                                     <li><!-- SIGN OUT -->
                                         <%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %>

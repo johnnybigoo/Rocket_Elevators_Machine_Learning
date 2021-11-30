@@ -1,0 +1,13 @@
+<%= form_with url:interventions_path, model: @intervention do |form| %>
+  
+  <%= form.select :employee_id, @employees, {include_blank: 'Select Employee'}, {class:"form-control form-control-lg"}  %>
+
+  <%= form.select :customer_id, @customers, {include_blank: 'Select Customer'}, {class:"form-control form-control-lg"}  %>
+  <%= form.select :building_id, [], {include_blank: 'Select Building'}, {class:"form-control form-control-lg"}  %>
+  <%= form.select :battery_id, [], {include_blank: 'Select Battery'}, {class:"form-control form-control-lg"}  %>
+  <%= form.select :column_id, [], {include_blank: 'Select Column'}, {class:"form-control form-control-lg"}  %>
+  <%= form.select :elevator_id, [], {include_blank: 'Select Elevator'}, {class:"form-control form-control-lg"}  %>
+  <%= form.text_area :report, {class:"form-control form-control-lg", placeholder:"Describe report"}   %>
+  <%= form.submit 'Submit', {class:"btn btn-primary"}  %>
+
+<% end %>
