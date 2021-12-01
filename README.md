@@ -20,16 +20,9 @@
 
 Rocket Elevators Foundation is the 9th week project for the Odyssey 14 weeks program in CodeBoxx. 
 
-By the 4th week We have created a CRUD website using a using Ruby on Rails with the website created in the Genesis Program. 
+By the 9th week We have created an INTERVENTION page that will be reponsible to send the intervention requests to MySql Database
+storing data on the intervention table and also creating a ticket with Zendesk API
 
-website used: [rocketelevators-jt.com/](http://rocketelevators-jt.com/)
-
-We have also included a MySql Database that saves the quotations inserted in the quote form, and an Admin page.
-
-##
-
-For the 5th week, we have included a Data Warehouse with Postgres where has taken the subimitted quotes and contact forms info and through some queries
-the Admin was able to analyse those data.
 
 <br>
 
