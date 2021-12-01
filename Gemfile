@@ -97,3 +97,5 @@ gem 'secondbase'
 gem 'chartkick'
 
 gem 'groupdate'
+
+gem "zendesk_api"

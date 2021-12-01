@@ -42,8 +42,7 @@ class InterventionsController < ApplicationController
 
   def create
     @intervention = Intervention.new(intervention_params)
-
-    # puts @intervation.as_json
+    
     if @intervention.save
       flash[:notice] = "Intervention Created Successful"
         redirect_to new_intervention_path
