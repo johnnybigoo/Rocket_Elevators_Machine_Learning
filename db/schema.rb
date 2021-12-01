@@ -127,7 +127,7 @@ ActiveRecord::Schema.define(version: 2021_11_30_001613) do
     t.integer "employee_id"
     t.bigint "customer_id"
     t.bigint "building_id"
-    t.bigint "battery_id"
+    t.bigint "batterie_id"
     t.bigint "column_id"
     t.bigint "elevator_id"
     t.date "start_date"
@@ -137,7 +137,7 @@ ActiveRecord::Schema.define(version: 2021_11_30_001613) do
     t.integer "status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["battery_id"], name: "index_interventions_on_battery_id"
+    t.index ["batterie_id"], name: "index_interventions_on_batterie_id"
     t.index ["building_id"], name: "index_interventions_on_building_id"
     t.index ["column_id"], name: "index_interventions_on_column_id"
     t.index ["customer_id"], name: "index_interventions_on_customer_id"
@@ -194,7 +194,7 @@ ActiveRecord::Schema.define(version: 2021_11_30_001613) do
   add_foreign_key "customers", "users", column: "userId"
   add_foreign_key "elevators", "columns", column: "columnId"
   add_foreign_key "employees", "users"
-  add_foreign_key "interventions", "batteries"
+  add_foreign_key "interventions", "batteries", column: "batterie_id"
   add_foreign_key "interventions", "buildings"
   add_foreign_key "interventions", "columns"
   add_foreign_key "interventions", "customers"

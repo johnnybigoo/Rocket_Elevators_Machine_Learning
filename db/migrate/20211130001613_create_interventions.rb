@@ -4,7 +4,7 @@ class CreateInterventions < ActiveRecord::Migration[5.2]
       t.references :employee, foreign_key: true, type: :integer 
       t.references :customer, foreign_key: true
       t.references :building, foreign_key: true
-      t.references :battery, foreign_key: true
+      t.references :batterie, foreign_key: true
       t.references :column, foreign_key: true
       t.references :elevator, foreign_key: true
       t.date :start_date

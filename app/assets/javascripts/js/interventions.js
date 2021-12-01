@@ -1,7 +1,7 @@
 
 $("#intervention_customer_id").hide()
 $("#intervention_building_id").hide()
-$("#intervention_battery_id").hide()
+$("#intervention_batterie_id").hide()
 $("#intervention_column_id").hide()
 $("#intervention_elevator_id").hide()
 
@@ -37,7 +37,7 @@ $("#intervention_customer_id").change(function (e) {
 
 $("#intervention_building_id").change(function (e) {
   console.log(this.value)
-  $("#intervention_battery_id").show()
+  $("#intervention_batterie_id").show()
   var value = this.value
 
   $.ajax({
@@ -54,13 +54,13 @@ $("#intervention_building_id").change(function (e) {
 
       $(data).each(function () {
         var current_battery = this;
-        $("#intervention_battery_id").append($('<option>').text(current_battery.buildingId).val(current_battery.id));
+        $("#intervention_batterie_id").append($('<option>').text(current_battery.buildingId).val(current_battery.id));
       });
     }
   });
 })
 
-$("#intervention_battery_id").change(function (e) {
+$("#intervention_batterie_id").change(function (e) {
   console.log(this.value)
   $("#intervention_column_id").show()
   var value = this.value

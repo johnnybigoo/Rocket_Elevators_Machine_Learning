@@ -1,18 +1,5 @@
 class InterventionsController < ApplicationController
-  def new
-    @intervention = Intervention.new
-    @employees = Employee.all.collect {|p| [ p.full_name, p.id ]}
-    @customers = Customer.all.collect {|p| [ p.fullName, p.id ]}
-    @buildings = Building.all.collect {|p| [ p.fullNameAdministrator, p.id ]}
-    @batteries = Battery.all.collect {|p| [ p.buildingId, p.id ]}
-    @columns = Column.all.collect {|p| [ p.batteryId, p.id ]}
-    @elevators = Elevator.all.collect {|p| [ p.columnId, p.id ]}
-  end
-
-  def create 
-
-  end
-
+  
   def get_buildings
     @buildings = Building.where(customerId: params[:customer_id])
 
@@ -43,5 +30,31 @@ class InterventionsController < ApplicationController
     respond_to do |format|
       format.json { render :json => @elevators}
     end
+  end
+
+  def new
+    @intervention = Intervention.new
+    @employees = Employee.all.collect {|p| [ p.full_name, p.id ]}
+    @customers = Customer.all.collect {|p| [ p.fullName, p.id ]}
+
+
+  end
+
+  def create
+    @intervention = Intervention.new(intervention_params)
+
+    # puts @intervation.as_json
+    if @intervention.save
+      flash[:notice] = "Intervention Created Successful"
+        redirect_to new_intervention_path
+    else
+      render :new 
+    end
+  end
+
+  private
+
+  def intervention_params
+    params.require(:intervention).permit(:employee_id, :customer_id, :building_id, :batterie_id, :column_id, :elevator_id, :report)
   end
 end
