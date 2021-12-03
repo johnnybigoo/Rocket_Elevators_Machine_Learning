@@ -32,6 +32,8 @@ storing data on the intervention table and also creating a ticket with Zendesk A
 
 <br>
 
+After filling and submitting an Intervention form, a new ticket will be created and send to the team. For to do that we are using Zendesk API, that we have integrated to this project.
+
 ## Installation
 
 Clone or download the .zip for this project. 
@@ -79,19 +81,14 @@ To access the database, use Dbeaver or MySQLWorkbench, which shows a history of 
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 * [Postgres V-10.18](https://www.postgresql.org/docs/10/release-10-18.html)
+* [Zendesk API Quick Start](https://developer.zendesk.com/documentation/ticketing/getting-started/zendesk-api-quick-start/)
 
 
 <br>
 
-<!-- TEAM MWMBERS -->
-## TEAM Project-RoR ~> Member:
+## Project create by:
 
 - **[Jones Tavares](https://github.com/johnnybigoo)**
 
 
 
-
-<br>
-
-##
-<!-- Project Link: [https://github.com/AlexWallot/Rocket_Elevators_Information_System](https://github.com/AlexWallot/Rocket_Elevators_Information_System) -->
