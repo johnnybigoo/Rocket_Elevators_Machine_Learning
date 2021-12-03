@@ -8,6 +8,8 @@ class Intervention < ApplicationRecord
   belongs_to :column
   belongs_to :elevator
 
+  enum status: { pending: 0, incomplete: 1, complete: 2 }
+
   def create_ticket
     Zendesk.new(self).intervention_ticket
   end
