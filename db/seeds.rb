@@ -237,6 +237,15 @@ addressId = 1
     addressId = addressId + 1
 end
 
+# cust_info.each do |ci|
+#     list = [:customerId, :contactPhone]
+#     info = CustInfo.new(ci.reject {|c| list.include?(c)})
+#     info.user_id = wi[:customerId]
+#     info.build_key_management({:customerId => ci[:customerId], :iv => SecureRandom.hex(32)})
+#     info.contactPhone = ci[:contactPhone]
+#     info.save
+# end
+
 
 buildingId = 1
 100.times do
