@@ -31,3 +31,5 @@ config/database.yml
 db/migrate/addresses-us-1000.json
 
 /config/local_env.yml
+
+.idea
