@@ -32,7 +32,7 @@ const createProfile = async () => {
 
 const verifyAudio = async (audioFileName, profileId) => {
   loadingUpdater(
-    'Comparing audio clip against selected voice profile, please wait'
+    'Comparing between selected audio clip and voice profile, please wait'
   );
   try {
     const response = await fetch(
@@ -122,3 +122,5 @@ function showDisplay() {
     i.style.display = 'none';
   }
 }
+
+
