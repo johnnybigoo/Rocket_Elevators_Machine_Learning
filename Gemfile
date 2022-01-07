@@ -89,8 +89,6 @@ gem 'execjs'
 
 gem 'therubyracer', :platforms => :ruby
 
-gem 'libv8', '~> 3.16.14.15'
-
 gem 'faker'
 
 gem 'pg'
