@@ -1,15 +1,15 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://rocketlift.ca/assets/_rocket/R2-3c6296bf2343b849b947f8ccfce0de61dd34ba7f9e2a23a53d0a743bc4604e3c.png">
-    <img src="https://rocketlift.ca/assets/_rocket/R2-3c6296bf2343b849b947f8ccfce0de61dd34ba7f9e2a23a53d0a743bc4604e3c.png" alt="Logo" width="500" height="200">
+  <a href="http://rocketelevators-jt.com/assets/_rocket/R2-3c6296bf2343b849b947f8ccfce0de61dd34ba7f9e2a23a53d0a743bc4604e3c.png">
+    <img src="http://rocketelevators-jt.com/assets/_rocket/R2-3c6296bf2343b849b947f8ccfce0de61dd34ba7f9e2a23a53d0a743bc4604e3c.png" alt="Logo" width="500" height="200">
   </a>
 
   <h3 align="center">Rocket Elevators Foundation
 </h3>
   
   <p align="center">
-    Odyssey Program - Week 9 
+    Odyssey Program - Week 13 
   </p>
 </p>
 
@@ -18,21 +18,25 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Rocket Elevators Foundation is the 9th week project for the Odyssey 14 weeks program in CodeBoxx. 
+Rocket Elevators Machine Learning is the 13th week project for the Odyssey 14 weeks program in CodeBoxx. 
 
-By the 9th week We have created an INTERVENTION page that will be reponsible to send the intervention requests to MySql Database
-storing data on the intervention table and also creating a ticket with Zendesk API
-
+By this week we had to create a Machine learning API using the Azure Api **Speech**. We used our voice to simulate a conversation that happen inside an elevator and see how well it can detect our voice and if it was able to translate it to text. From the **Speech** Service offered by Azure we have used *Speech-to-Text* and *Speaker Recognition*.
 
 <br>
 
-## Website deployed
+### Exemple of how the  *Speech Api* actually work:
 
-* ### [rocketelevators-jt.com/](https://rocketelevators-jt.com//)
 
-<br>
+First we create a *.wav* sound in this specific specs :
+|# Rate                         |Format         |Channel  |
+|-------------------------------|---------------|---------|
+|`16000Hz`                        |`16-bit`       |`1(Mono)`|
 
-After filling and submitting an Intervention form, a new ticket will be created and send to the team. For to do that we are using Zendesk API, that we have integrated to this project.
+We then enroll the *.wav* sound and extract them for modeling and then send to the database. Once enrolled we can use an other sample and let the **API** compare the 2 sounds together and then give a results based on the modeling from the first data we gave. The 2 major result are `Accepted (score > 0.5)` and `Rejected (score < 0.5)`.
+
+> **Pros:** The **Speech-To-Text** worked really well and the transcription doesnt differ a lot from the true result.
+> 
+> **Cons:** The **Speech API** from  **Azure** as some flaws where it wont recognize enrolled voice from conversation.
 
 ## Installation
 
@@ -56,16 +60,16 @@ Here are the commands that will have to be entered in your terminal when modific
 
 <br>
 
-## Accessing
+### Testing 
+You don't need to be logged in, just click in SPEECH on the menu and choose SPEECH SERVICES first.
 
-By clicking on “Login”, users will be redirected to a page and be asked to provide an email address and password.
-	
-	Example: 
+> Put the audio file on your local drive to test the *speaker transcribe*.
 
-	Email: nicolas.genest@codeboxx.biz
-	Password: password
 
-Forms are accessible to all users (with or without accounts). Once a “Contact Us” part for home page or Quote form in request a quote page is filled and submitted, data is generated in the back-end.
+
+- `Enroll` : The *enroll* section is used to create your voice profile inside the Database.
+- `Upload` : The *Upload* section is used to test this audio clip against a voice profile.
+- `Verify` : With the *verify* section you can test your Newly enroll profil ( or an older one) against and audio clip and verify if your test match !
 
 <br>
 
@@ -81,14 +85,10 @@ To access the database, use Dbeaver or MySQLWorkbench, which shows a history of 
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 * [Postgres V-10.18](https://www.postgresql.org/docs/10/release-10-18.html)
-* [Zendesk API Quick Start](https://developer.zendesk.com/documentation/ticketing/getting-started/zendesk-api-quick-start/)
+* [Microsoft Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/)
 
 
 <br>
-
-## Project create by:
-
-- **[Jones Tavares](https://github.com/johnnybigoo)**
 
 
 

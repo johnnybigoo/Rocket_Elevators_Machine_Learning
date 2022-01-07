@@ -66,12 +66,28 @@
                                     %>
 
                                 </li>
+
                                 <li><!-- INTERVENTIONS -->
                                     <%= link_to "INTERVENTION", 
                                     new_intervention_path(anchor: "intervention-page") 
                                     %>
-
                                 </li>
+																<li><!-- SPEECH SERVICE -->
+																	<a href="#" class="dropdown-toggle">
+																		SPEECH 
+																	</a>
+																	<!-- <a href="#">
+																		
+																	</a> -->
+																	<ul class="dropdown-menu white-space= normal">
+																		<li>
+																			<%= link_to "SPEECH SERVICES", speech_path %>
+																		</li>
+																		<li>
+																			<%= link_to "SPEECH TRANSCRIBE", speech_transcribe_path %>
+																		</li>
+																	</ul>
+																</li>
                                 <% if user_signed_in? %>
                                     <li><!-- SIGN OUT -->
                                         <%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %>
@@ -79,7 +95,7 @@
                                     <li>
                                         <%= link_to "ADMIN", rails_admin_path %>
                                     </li>
-									<li>
+																		<li>
                                         <%= link_to "STATS", pages_charts_path %>
                                     </li>
                                 <% else %>
