@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_one :employee
 
-  validate :secure_password, :if => :setting_password?
+  # validate :secure_password, :if => :setting_password?
 
 
   def secure_password

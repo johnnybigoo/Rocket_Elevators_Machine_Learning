@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   get '/quote/new', to: 'quote#new'
   post '/quote', to: 'quote#create'
   post '/contact', to: 'contact#create'
+  get 'speech', to: 'azure_speech#index'
+  get 'speech/transcribe', to: 'azure_speech#speech_transcription'
+  get 'verify_audio', to: 'azure_speech#verify_audio'
+  post 'upload_audio', to: 'azure_speech#upload_audio'
+  get 'create_profile_id', to: 'azure_speech#create_profile_id'
+  get 'enroll_profile', to: 'azure_speech#enroll_new_profile'
 
   resources :interventions, only: [:new, :create]
 

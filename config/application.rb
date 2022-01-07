@@ -7,6 +7,8 @@ require 'rails/all'
 
 
 Bundler.require(*Rails.groups)
+Dotenv::Railtie.load
+
 
 module RocketElevatorsInformationSystem
   class Application < Rails::Application

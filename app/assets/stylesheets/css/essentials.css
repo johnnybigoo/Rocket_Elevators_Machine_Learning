@@ -15317,3 +15317,20 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
 	}
 
 }
+
+.boxSpeech {
+	background-color:rgba(130, 130, 130, 0.55);
+	border: 5px double black;
+	margin: 5px;
+	-webkit-border-radius: 8px !important;
+	border-radius: 8px !important;
+}
+
+
+.speechBlock {
+	background-color:rgba(184, 183, 182, 0.35);
+	border: 5px double black;
+	margin: 5px;
+	-webkit-border-radius: 8px !important;
+	border-radius: 8px !important;
+}

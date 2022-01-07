@@ -19,8 +19,6 @@
   <body>
     <%= render 'partials/header' %>
     <%= yield %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render 'partials/footer' %>
     <%= yield :after_js %>
   </body>
