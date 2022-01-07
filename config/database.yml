@@ -1,0 +1,28 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: allo1392
+
+
+development:
+  <<: *default
+  database: rocket_elevators_machlearn_development
+test:
+  <<: *default
+  database: rocket_elevators_machlearn_test
+
+production:
+  url: <%= ENV['DATABASE_URL'] %>
+
+secondbase:
+  development:
+    <<: *default
+    database: data_warehouse_speechml
+  test:
+    <<: *default
+    database: data_warehouse_speechml_test
+  production:
+    <<: *default
+    url: <%= ENV['SECOND_DATABASE_URL'] %>
