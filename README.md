@@ -24,6 +24,12 @@ By this week we had to create a Machine learning API using the Azure Api **Speec
 
 <br>
 
+### Website deployed:
+[https://rocket-elevators-ml.herokuapp.com/](https://rocket-elevators-ml.herokuapp.com/)
+
+
+<br>
+
 ### Exemple of how the  *Speech Api* actually work:
 
 
