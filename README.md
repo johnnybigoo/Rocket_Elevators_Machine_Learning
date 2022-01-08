@@ -68,7 +68,7 @@ Here are the commands that will have to be entered in your terminal when modific
 <br>
 
 ### Testing 
-You don't need to be logged in, just click in SPEECH on the menu and choose SPEECH SERVICES first.
+You don't need to be logged in, just click in SPEECH SERVICES menu tabe and choose service you desire to test.
 
 > Put the audio file on your local drive to test the *speaker transcribe*.
 
