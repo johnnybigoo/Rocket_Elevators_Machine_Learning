@@ -72,7 +72,11 @@ You don't need to be logged in, just click in SPEECH SERVICES menu tabe and choo
 
 > Put the audio file on your local drive to test the *speaker transcribe*.
 
+<br>
 
+[Click here to download the audio samples](https://github.com/johnnybigoo/ML-Audio-Samples.git)
+
+<br>
 
 - `Enroll` : The *enroll* section is used to create your voice profile inside the Database.
 - `Upload` : The *Upload* section is used to test this audio clip against a voice profile.
