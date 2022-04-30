@@ -1,8 +1,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="http://rocketelevators-jt.com/assets/_rocket/R2-3c6296bf2343b849b947f8ccfce0de61dd34ba7f9e2a23a53d0a743bc4604e3c.png">
-    <img src="http://rocketelevators-jt.com/assets/_rocket/R2-3c6296bf2343b849b947f8ccfce0de61dd34ba7f9e2a23a53d0a743bc4604e3c.png" alt="Logo" width="500" height="200">
+  <a href="https://rocketelevate.ca/assets/images/RocketElevatorAssets/R2.png">
+    <img src="https://rocketelevate.ca/assets/images/RocketElevatorAssets/R2.png" alt="Logo" width="500" height="200">
   </a>
 
   <h3 align="center">Rocket Elevators Foundation
